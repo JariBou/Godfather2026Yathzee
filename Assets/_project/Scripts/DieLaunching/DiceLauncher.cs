@@ -18,7 +18,7 @@ namespace _project.Scripts.DieLaunching
         [SerializeField, Foldout("DEBUG")] private int _waveLaunchCount = 5;
         private Queue<GameObject> _diceQueue = new();
 
-        [Button]
+        [Button(enabledMode: EButtonEnableMode.Playmode)]
         public void ClearDices()
         {
             while (_diceQueue.Count > 0)
@@ -48,7 +48,7 @@ namespace _project.Scripts.DieLaunching
             rb.linearVelocity = direction * Random.Range(_randForce.x, _randForce.y);
         }
         
-        [Button]
+        [Button(enabledMode: EButtonEnableMode.Playmode)]
         public void LaunchDice()
         {
             if (_diceQueue.Count > _maxDiceCount)
@@ -84,7 +84,7 @@ namespace _project.Scripts.DieLaunching
             Debug.Log($"A Die has stopped moving, face value is: {dice.GetUpFace()}");
         }
 
-        [Button]
+        [Button(enabledMode: EButtonEnableMode.Playmode)]
         public void WaveLaunchDice()
         {
             _ = DelayedWaveLaunch();
