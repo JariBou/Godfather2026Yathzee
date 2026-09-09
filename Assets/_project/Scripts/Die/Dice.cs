@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using AYellowpaper.SerializedCollections;
+using NaughtyAttributes;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -9,6 +10,7 @@ namespace _project.Scripts.Die
 {
     public abstract class Dice : MonoBehaviour
     {
+        [SerializeField, InfoBox("0, 1, 2, 3, 4, 5 => down, back, right, up, left, front ")] private string _diceName;
         [SerializeField] protected List<int> _facesValues = new(6) { 1, 2, 3, 4, 5, 6 };
         [SerializeField] protected SerializedDictionary<GameObject, int> _faceIdMap = new();
 
@@ -20,22 +22,22 @@ namespace _project.Scripts.Die
                 switch (direction)
                 {
                     case "Forward":
-                        _faceIdMap[t.gameObject] = 0;
+                        _faceIdMap[t.gameObject] = 5;
                         break;
                     case "Backward":
                         _faceIdMap[t.gameObject] = 1;
                         break;
                     case "Left":
-                        _faceIdMap[t.gameObject] = 2;
-                        break;
-                    case "Right":
-                        _faceIdMap[t.gameObject] = 3;
-                        break;
-                    case "Up":
                         _faceIdMap[t.gameObject] = 4;
                         break;
+                    case "Right":
+                        _faceIdMap[t.gameObject] = 2;
+                        break;
+                    case "Up":
+                        _faceIdMap[t.gameObject] = 3;
+                        break;
                     case "Down":
-                        _faceIdMap[t.gameObject] = 5;
+                        _faceIdMap[t.gameObject] = 0;
                         break;
                 }
             }
@@ -63,5 +65,10 @@ namespace _project.Scripts.Die
         }
 
         public abstract void ApplyEffect(int faceScore, Object gamestate);
+
+        private void OnDrawGizmosSelected()
+        {
+            // TODO: Draw labels for directions
+        }
     }
 }
