@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using _project.Scripts.Die;
 using NaughtyAttributes;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace _project.Scripts
+namespace _project.Scripts.DieLaunching
 {
     public class DiceLauncher : MonoBehaviour
     {
@@ -56,17 +57,31 @@ namespace _project.Scripts
             }
             GameObject dice = Instantiate(_dicePrefab, transform.position, Random.rotation, transform);
             _diceQueue.Enqueue(dice);
-            Rigidbody rb = dice.GetComponent<Rigidbody>();
-            rb.angularVelocity = Random.onUnitSphere * Random.Range(_randAngularForce.x, _randAngularForce.y);
             
+            LaunchedDieBroadcaster launchedDieBroadcaster = dice.GetComponent<LaunchedDieBroadcaster>();
+            if (launchedDieBroadcaster == null)
+            {
+                throw new MissingComponentException("Missing LaunchedDieBroadcaster on Dice Prefab");
+            }
+            launchedDieBroadcaster.WasLaunched();
+            launchedDieBroadcaster.StoppedMoving += LaunchedDieBroadcasterOnStoppedMoving;
+            
+            Rigidbody rb = dice.GetComponent<Rigidbody>();
             if (rb == null)
             {
                 throw new MissingComponentException("Missing rigidbody on Dice Prefab");
             }
+
+            rb.angularVelocity = Random.onUnitSphere * Random.Range(_randAngularForce.x, _randAngularForce.y);
             
             Vector3 direction = Quaternion.AngleAxis(Random.Range(-_randAngleMax, _randAngleMax), transform.forward)
                                 * (Quaternion.AngleAxis(Random.Range(-_randAngleMax, _randAngleMax), transform.right) * transform.up);
             rb.linearVelocity = direction * Random.Range(_randForce.x, _randForce.y);
+        }
+
+        private void LaunchedDieBroadcasterOnStoppedMoving(Dice dice)
+        {
+            Debug.Log($"A Die has stopped moving, face value is: {dice.GetUpFace()}");
         }
 
         [Button]

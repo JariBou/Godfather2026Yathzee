@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
+using _project.Scripts.Die;
 
 public class inventoryBehaviour : MonoBehaviour
 {

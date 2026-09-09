@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ScoreDataScriptableObject
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.ScoreDataScriptableObject
   _initialTargetScore: 1
-  _perStageMultiplier: 2.013
+  _perStageMultiplier: 2.5
