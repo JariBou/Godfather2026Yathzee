@@ -1,18 +1,19 @@
 using System;
 using System.Collections.Generic;
+using _project.Scripts.ScriptableObjects;
 using AYellowpaper.SerializedCollections;
 using NaughtyAttributes;
 using UnityEngine;
-using Object = UnityEngine.Object;
+using UnityEngine.Serialization;
 
 
 namespace _project.Scripts.Die
 {
-    public abstract class Dice : MonoBehaviour
+    public abstract class DiceBase : MonoBehaviour
     {
-        [SerializeField, InfoBox("0, 1, 2, 3, 4, 5 => down, back, right, up, left, front ")] private string _diceName;
-        [SerializeField] protected List<int> _facesValues = new(6) { 1, 2, 3, 4, 5, 6 };
-        [SerializeField] protected SerializedDictionary<GameObject, int> _faceIdMap = new();
+        [FormerlySerializedAs("_diceData"),SerializeField, InfoBox("0, 1, 2, 3, 4, 5 => down, back, right, up, left, front ")] protected DiceDataScriptableObject diceData;
+        [FormerlySerializedAs("_facesValues"),SerializeField] protected List<int> facesValues = new(6) { 1, 2, 3, 4, 5, 6 };
+        [FormerlySerializedAs("_faceIdMap"),SerializeField] protected SerializedDictionary<GameObject, int> faceIdMap = new();
 
         private void Reset()
         {
@@ -22,32 +23,32 @@ namespace _project.Scripts.Die
                 switch (direction)
                 {
                     case "Forward":
-                        _faceIdMap[t.gameObject] = 5;
+                        faceIdMap[t.gameObject] = 5;
                         break;
                     case "Backward":
-                        _faceIdMap[t.gameObject] = 1;
+                        faceIdMap[t.gameObject] = 1;
                         break;
                     case "Left":
-                        _faceIdMap[t.gameObject] = 4;
+                        faceIdMap[t.gameObject] = 4;
                         break;
                     case "Right":
-                        _faceIdMap[t.gameObject] = 2;
+                        faceIdMap[t.gameObject] = 2;
                         break;
                     case "Up":
-                        _faceIdMap[t.gameObject] = 3;
+                        faceIdMap[t.gameObject] = 3;
                         break;
                     case "Down":
-                        _faceIdMap[t.gameObject] = 0;
+                        faceIdMap[t.gameObject] = 0;
                         break;
                 }
             }
         }
 
-        public int GetUpFace()
+        public int GetUpFaceValue()
         {
             float highestY = float.MinValue;
             int faceIndex = -1;
-            foreach ((GameObject anchor, int i) in _faceIdMap)
+            foreach ((GameObject anchor, int i) in faceIdMap)
             {
                 if (highestY < anchor.transform.position.y)
                 {
@@ -61,10 +62,10 @@ namespace _project.Scripts.Die
                 throw new  Exception("No face found");
             }
         
-            return _facesValues[faceIndex];
+            return facesValues[faceIndex];
         }
 
-        public abstract void ApplyEffect(int faceScore, Object gamestate);
+        public abstract Awaitable ApplyEffect(GameState gamestate);
 
         private void OnDrawGizmosSelected()
         {

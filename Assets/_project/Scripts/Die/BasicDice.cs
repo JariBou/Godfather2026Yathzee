@@ -1,15 +1,15 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace _project.Scripts.Die
 {
-    public class BasicDice : Dice
+    public class BasicDice : DiceBase
     {
-        public new List<int> faces = new() { 1, 2, 3, 4, 5, 6 };
-
-
-        public override void ApplyEffect(int faceScore, Object gamestate)
+        
+    #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        public override async Awaitable ApplyEffect(GameState gamestate)
+    #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
+            gamestate.AddScore(GetUpFaceValue());
         }
     }
 }

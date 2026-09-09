@@ -5,7 +5,7 @@ using _project.Scripts.Die;
 
 public class inventoryBehaviour : MonoBehaviour
 {
-    public List<Dice> DiceInventory = new List<Dice>();
+    public List<DiceBase> DiceInventory = new List<DiceBase>();
     public List<Objects> ObjectsInventory = new List<Objects>();
 
 
@@ -24,13 +24,13 @@ public class inventoryBehaviour : MonoBehaviour
         
     }
 
-    public void addDice (Dice dice)
+    public void addDice (DiceBase diceBase)
     {
-        DiceInventory.Add(dice);
+        DiceInventory.Add(diceBase);
     }
 
-    public void replaceDice(Dice dice, int index) 
+    public void replaceDice(DiceBase diceBase, int index) 
     {
-        DiceInventory[index] = dice;
+        DiceInventory[index] = diceBase;
     }
 }

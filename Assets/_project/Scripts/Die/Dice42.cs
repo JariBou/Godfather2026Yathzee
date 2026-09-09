@@ -2,14 +2,19 @@
 
 namespace _project.Scripts.Die
 {
-    public class Dice42 : Dice
+    public class Dice42 : DiceBase
     {
-        public override void ApplyEffect(int faceScore, Object gamestate)
+    #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        public override async Awaitable ApplyEffect(GameState gamestate)
+    #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
-            if (faceScore == 42)
+            int upFaceValue = GetUpFaceValue();
+            if (upFaceValue == 42)
             {
-                //gamestate.ThrowNewDice(new Dice42());
+                gamestate.ActiveDices.Push(await gamestate.Launcher.LaunchDieAndWaitForStop(diceData.Prefab));
             }
+            gamestate.AddScore(upFaceValue);
+            Debug.Log("Applying Dice42 Effect");
         }
     }
 }

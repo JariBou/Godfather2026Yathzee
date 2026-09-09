@@ -834,7 +834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.DieLaunching.LaunchedDieBroadcaster
   _rigidbody: {fileID: 4834855596845306836}
-  _dice: {fileID: 3111463185057125695}
+  _diceBase: {fileID: 3111463185057125695}
 --- !u!114 &3111463185057125695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,9 +847,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5f41b909227400dbcc4a42b03a21c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.Die.Dice42
-  _diceName: 
-  _facesValues: 010000000200000003000000040000000500000006000000
-  _faceIdMap:
+  diceData: {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
+  facesValues: 010000000200000003000000040000002a0000002a000000
+  faceIdMap:
     _serializedList:
     - Key: {fileID: 1289056679750862235}
       Value: 5

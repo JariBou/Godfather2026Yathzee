@@ -132,7 +132,7 @@ public abstract class trophe42 : Objects
 {
     public override float ApplyScoreEffect(Object gamestate, float score)
     {
-        List<Dice> dinv = FindAnyObjectByType<inventoryBehaviour>().DiceInventory;
+        List<DiceBase> dinv = FindAnyObjectByType<inventoryBehaviour>().DiceInventory;
         for (int dice = 0; dice < dinv.Count; dice++)
         {
             if (dinv[dice] is Dice42)
@@ -189,11 +189,11 @@ public abstract class luckyQueen : Objects
 
         for (int i = 0; i < inv.DiceInventory.Count; i++)
         {
-            Dice dice = inv.DiceInventory[i];
-            if (dice is GoldDice) inv.replaceDice(new EmeraldDice(), i);
-            else if (dice is SilverDice) inv.replaceDice(new GoldDice(), i);
-            else if (dice is BronzeDice) inv.replaceDice(new SilverDice(), i);
-            else if (dice is BasicDice) inv.replaceDice(new BronzeDice(), i);
+            DiceBase diceBase = inv.DiceInventory[i];
+            if (diceBase is GoldDice) inv.replaceDice(new EmeraldDice(), i);
+            else if (diceBase is SilverDice) inv.replaceDice(new GoldDice(), i);
+            else if (diceBase is BronzeDice) inv.replaceDice(new SilverDice(), i);
+            else if (diceBase is BasicDice) inv.replaceDice(new BronzeDice(), i);
         }
 
         return score;
@@ -208,11 +208,11 @@ public abstract class unLuckyQueen : Objects
 
         for (int i = 0; i < inv.DiceInventory.Count; i++)
         {
-            Dice dice = inv.DiceInventory[i];
-            if (dice is EmeraldDice) inv.replaceDice(new GoldDice(), i);
-            else if (dice is GoldDice) inv.replaceDice(new SilverDice(), i);
-            else if (dice is SilverDice) inv.replaceDice(new BronzeDice(), i);
-            else if (dice is BronzeDice) inv.replaceDice(new BasicDice(), i);
+            DiceBase diceBase = inv.DiceInventory[i];
+            if (diceBase is EmeraldDice) inv.replaceDice(new GoldDice(), i);
+            else if (diceBase is GoldDice) inv.replaceDice(new SilverDice(), i);
+            else if (diceBase is SilverDice) inv.replaceDice(new BronzeDice(), i);
+            else if (diceBase is BronzeDice) inv.replaceDice(new BasicDice(), i);
         }
 
         return score;

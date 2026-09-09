@@ -1,19 +1,13 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace _project.Scripts.Die
 {
-    public class redCloverDice : Dice
+    public class redCloverDice : DiceBase
     {
-        public new List<int> faces = new() { 12, 22, 32, 42 , 52, 1 };
-
-
-        public override void ApplyEffect(int faceScore, Object gamestate)
+    #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        public override async Awaitable ApplyEffect(GameState gamestate)
+    #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
-            if (faceScore == 1)
-            {
-
-            }
         }
     }
 }

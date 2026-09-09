@@ -1,14 +1,12 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace _project.Scripts.Die
 {
-    public class SilverDice : Dice
+    public class SilverDice : DiceBase
     {
-        public new List<int> faces = new() { 5, 10, 15, 20, 25, 30 };
-
-
-        public override void ApplyEffect(int faceScore, Object gamestate)
+    #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        public override async Awaitable ApplyEffect(GameState gamestate)
+    #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
         }
     }
