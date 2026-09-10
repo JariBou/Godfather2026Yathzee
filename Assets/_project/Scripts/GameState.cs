@@ -7,7 +7,6 @@ using _project.Scripts.ScriptableObjects;
 using _project.Scripts.ScriptableObjects.Dice;
 using _project.Scripts.ScriptableObjects.Relics;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace _project.Scripts
 {
@@ -23,14 +22,18 @@ namespace _project.Scripts
         public List<DiceDataScriptableObject> Inventory { get; private set; }
         public List<RelicScriptableObjectBase> Relics { get; set; }
 
+        public int CurrentStage { get; private set; }
+
         public event Action<GameState> GameStateResolved;
-        public UnityEvent<int, int> ScoreUpdated;
+        public event Action<int, int> ScoreUpdated;
 
 
-        public GameState(DiceLauncher diceLauncher, ScoreDataScriptableObject scoreData, List<DiceDataScriptableObject> inventory,
+        public GameState(int currentStage, DiceLauncher diceLauncher, ScoreDataScriptableObject scoreData, List<DiceDataScriptableObject> inventory,
                          List<RelicScriptableObjectBase> relics,
                          List<DiceBase> activeDices)
         {
+            CurrentStage = currentStage;
+            TargetRoundScore = scoreData.GetTargetScoreForStageInt(CurrentStage);
             Relics = relics;
             Inventory = inventory;
             ScoreData = scoreData;

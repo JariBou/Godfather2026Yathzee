@@ -21,7 +21,7 @@ namespace _project.Scripts.Editor
 
             // EditorGUI.BeginDisabledGroup(true);
 
-            EditorGUILayout.LabelField("Target Score per stage: (1 * stage ^ multiplier)");
+            EditorGUILayout.LabelField("Target Score per stage:");
             _scrollPos = EditorGUILayout.BeginScrollView(_scrollPos);
             EditorGUI.indentLevel++;
 

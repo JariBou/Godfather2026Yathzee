@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.GameManager
   _state: 0
-  _scoreData: {fileID: 0}
+  _scoreData: {fileID: 11400000, guid: 127d8f30e24c24d4185fd76c8e9f4c2e, type: 2}
   _diceLauncher: {fileID: 980445019}
   _inventory:
   - {fileID: 11400000, guid: 8e6949d85a6214f489a76949e0aae433, type: 2}
@@ -202,6 +202,21 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ScoreUpdated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6902060422091730363}
+        m_TargetAssemblyTypeName: _project.Scripts.UI.GameScreenView, Assembly-CSharp
+        m_MethodName: SetScore
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1295,6 +1310,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 770713851}
     - target: {fileID: 2156227986637546726, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 464049917}
+    - target: {fileID: 2156227986637546726, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
       propertyPath: diceInvGame.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -1685,6 +1704,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4305539919422647888, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
   m_PrefabInstance: {fileID: 6902060422091730361}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6902060422091730363 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2156227986637546726, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+  m_PrefabInstance: {fileID: 6902060422091730361}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6902060422091730362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c61b521081d3c41ad192cc1cbae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.GameScreenView
 --- !u!1001 &7536806484788307840
 PrefabInstance:
   m_ObjectHideFlags: 0

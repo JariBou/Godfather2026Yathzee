@@ -27,6 +27,7 @@ namespace _project.Scripts
         [SerializeField] private ScoreDataScriptableObject _scoreData;
         [SerializeField] private DiceLauncher _diceLauncher;
         private GameState _gameState;
+        public int CurrentStage { get; private set; } = -1;
 
         [SerializeField] private List<DiceDataScriptableObject> _inventory;
         [HideInInspector] public List<DiceDataScriptableObject> Inventory { get { return _inventory; } set { _inventory = value; } }
@@ -34,10 +35,13 @@ namespace _project.Scripts
         [HideInInspector] public List<RelicScriptableObjectBase> Relics { get { return _relics; } set { _relics = value; } }
 
         public UnityEvent GameStateResolved;
+        public UnityEvent<int, int> ScoreUpdated;
 
         public State CurrentState => _state;
-        
-        
+
+        public ScoreDataScriptableObject ScoreData => _scoreData;
+
+
         public void ChangeStateToMenu()
         {
             ChangeState(State.Menu);
@@ -78,6 +82,11 @@ namespace _project.Scripts
             _ = DoRoundAsync();
         }
 
+        public void NextTurn()
+        {
+            CurrentStage++;
+        }
+
         [Button(enabledMode:EButtonEnableMode.Playmode)]
         public async Awaitable DoRoundAsync()
         {
@@ -89,16 +98,28 @@ namespace _project.Scripts
 
             List<DiceBase> activeDices = await _diceLauncher.LaunchDiceAndWaitForStop(prefabs);
             
-            _gameState = new GameState(_diceLauncher, _scoreData, _inventory, _relics, activeDices);
+            _gameState = new GameState(CurrentStage, _diceLauncher, ScoreData, _inventory, _relics, activeDices);
 
             _gameState.GameStateResolved += GameStateOnGameStateResolved;
+            _gameState.ScoreUpdated += OnScoreUpdated;
             _ = _gameState.Resolve();
+        }
+
+        private void OnScoreUpdated(int arg1, int arg2)
+        {
+            ScoreUpdated?.Invoke(arg1, arg2);
         }
 
         private void GameStateOnGameStateResolved(GameState obj)
         {
             Debug.Log($"Game state was resolved (score: {obj.CurrentRoundScore})");
-            // GameStateResolved?.Invoke();
+            _ = DelayedGameStateResolved(3f);
+        }
+
+        private async Awaitable DelayedGameStateResolved(float delayTime)
+        {
+            await Awaitable.WaitForSecondsAsync(delayTime);
+            GameStateResolved?.Invoke();
         }
 
 
