@@ -230,6 +230,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e35d15255d77df4fada12bf128303c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ShopView
+--- !u!114 &1257670610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2156227986637546726, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+  m_PrefabInstance: {fileID: 6902060422091730361}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c61b521081d3c41ad192cc1cbae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.GameScreenView
 --- !u!1 &1290943747
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,13 +389,14 @@ GameObject:
   - component: {fileID: 1625370271}
   - component: {fileID: 1625370270}
   - component: {fileID: 1625370269}
+  - component: {fileID: 1625370272}
   m_Layer: 0
   m_Name: UI_Debug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1625370269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,6 +440,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1625370272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625370268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f08ae4bff1d5f240954aae25371d01c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.GameScreenViewProbe
+  _view: {fileID: 1257670610}
 --- !u!1 &1753276494
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3827705350026562025, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3868838963018742507, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: m_Pivot.x
@@ -1025,10 +1050,6 @@ PrefabInstance:
     - target: {fileID: 4305539919422647888, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
       propertyPath: m_Name
       value: GameScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305539919422647888, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

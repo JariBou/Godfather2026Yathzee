@@ -7,14 +7,17 @@ namespace _project.Scripts.UI
     public class ShopView : MonoBehaviour
     {
         [SerializeField]
-        private IndexedButtonView[] _offers =
-            Array.Empty<IndexedButtonView>();
+        private IndexedButtonView[] _offers = Array.Empty<IndexedButtonView>();
 
         [SerializeField]
-        private IndexedButtonView[] _inventorySlots =
-            Array.Empty<IndexedButtonView>();
+        private IndexedButtonView[] _inventorySlots = Array.Empty<IndexedButtonView>();
 
         [SerializeField] private Button _finishButton;
+
+        [Header("Visuels")]
+        [SerializeField] private ItemVisualView[] _offerVisuals = Array.Empty<ItemVisualView>();
+
+        [SerializeField] private ItemVisualView[] _inventoryVisuals = Array.Empty<ItemVisualView>();
 
         public event Action<int> OfferClicked;
         public event Action<int> InventorySlotClicked;
@@ -69,6 +72,38 @@ namespace _project.Scripts.UI
         private void HandleFinishClicked()
         {
             FinishRequested?.Invoke();
+        }
+
+        public void SetOffer(int index, Sprite sprite, Color tint, string value = "")
+        {
+            _offerVisuals[index].SetVisual(sprite, tint, value);
+            _offers[index].SetInteractable(true);
+        }
+
+        public void ClearOffer(int index)
+        {
+            _offers[index].SetInteractable(false);
+            _offerVisuals[index].Clear();
+        }
+
+        public void SetInventoryItem(int index, Sprite sprite, Color tint, string value = "")
+        {
+            _inventoryVisuals[index].SetVisual(sprite, tint, value);
+        }
+
+        public void ClearInventoryItem(int index)
+        {
+            _inventoryVisuals[index].Clear();
+        }
+
+        public void SetInventorySlotInteractable(int index, bool interactable)
+        {
+            _inventorySlots[index].SetInteractable(interactable);
+        }
+
+        public void SetFinishInteractable(bool interactable)
+        {
+            _finishButton.interactable = interactable;
         }
     }
 }

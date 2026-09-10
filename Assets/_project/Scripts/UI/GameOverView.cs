@@ -36,7 +36,7 @@ namespace _project.Scripts.UI
                 _mainMenuButton.onClick.RemoveListener(HandleMainMenuClicked);
         }
 
-        public void SetSummary(int turn, float score, float quota)
+        public void SetSummary(int turn, double score, double quota)
         {
             string scoreLabel = score.ToString("N0", DisplayCulture);
             string quotaLabel = quota.ToString("N0", DisplayCulture);

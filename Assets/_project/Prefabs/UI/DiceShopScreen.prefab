@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 7030139721563713547}
   - component: {fileID: 7965643465591485980}
   - component: {fileID: 8785698277826324393}
+  - component: {fileID: 6789987814728637866}
   m_Layer: 5
   m_Name: DiceOffer_03
   m_TagString: Untagged
@@ -408,6 +409,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.IndexedButtonView
   _index: 2
   _button: {fileID: 7965643465591485980}
+--- !u!114 &6789987814728637866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115688015888925176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d86bbb9589fed7742abdb7e27f238784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemVisualView
+  _icon: {fileID: 7030139721563713547}
+  _valueText: {fileID: 0}
 --- !u!1 &1445327812401946782
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +511,7 @@ GameObject:
   - component: {fileID: 365902836844335038}
   - component: {fileID: 324458389153732129}
   - component: {fileID: 832128917405670487}
+  - component: {fileID: 6630699285707818385}
   m_Layer: 5
   m_Name: DiceOffer_02
   m_TagString: Untagged
@@ -618,6 +634,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.IndexedButtonView
   _index: 1
   _button: {fileID: 324458389153732129}
+--- !u!114 &6630699285707818385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769593243388607855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d86bbb9589fed7742abdb7e27f238784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemVisualView
+  _icon: {fileID: 365902836844335038}
+  _valueText: {fileID: 0}
 --- !u!1 &1918218445115354116
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +661,7 @@ GameObject:
   - component: {fileID: 5352984107359749542}
   - component: {fileID: 6657058511688860194}
   - component: {fileID: 786816914457559814}
+  - component: {fileID: 2038571864957943008}
   m_Layer: 5
   m_Name: DiceOffer_01
   m_TagString: Untagged
@@ -753,6 +784,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.IndexedButtonView
   _index: 0
   _button: {fileID: 6657058511688860194}
+--- !u!114 &2038571864957943008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918218445115354116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d86bbb9589fed7742abdb7e27f238784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemVisualView
+  _icon: {fileID: 5352984107359749542}
+  _valueText: {fileID: 0}
 --- !u!1 &2109038140348452883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,6 +1283,7 @@ GameObject:
   - component: {fileID: 3272022418342410798}
   - component: {fileID: 5506808613127370157}
   - component: {fileID: 3926393096127671772}
+  - component: {fileID: 3195708987911056899}
   m_Layer: 5
   m_Name: DiceVisual
   m_TagString: Untagged
@@ -1303,6 +1349,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3195708987911056899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2993326591170183867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d86bbb9589fed7742abdb7e27f238784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemVisualView
+  _icon: {fileID: 3926393096127671772}
+  _valueText: {fileID: 283707811395456248}
 --- !u!1 &3115877810282932988
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,6 +2133,7 @@ GameObject:
   - component: {fileID: 5140357949089914787}
   - component: {fileID: 1790453447619637394}
   - component: {fileID: 5971703788744735755}
+  - component: {fileID: 8996157797430936993}
   m_Layer: 5
   m_Name: DiceVisual
   m_TagString: Untagged
@@ -2138,6 +2199,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8996157797430936993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5464772872049302840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d86bbb9589fed7742abdb7e27f238784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemVisualView
+  _icon: {fileID: 5971703788744735755}
+  _valueText: {fileID: 9100529341559402605}
 --- !u!1 &5503955251639154648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2149,6 +2224,7 @@ GameObject:
   - component: {fileID: 8112065327112340770}
   - component: {fileID: 4231159106258865778}
   - component: {fileID: 8252561725405512717}
+  - component: {fileID: 1539480581556342087}
   m_Layer: 5
   m_Name: DiceVisual
   m_TagString: Untagged
@@ -2214,6 +2290,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1539480581556342087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5503955251639154648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d86bbb9589fed7742abdb7e27f238784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemVisualView
+  _icon: {fileID: 8252561725405512717}
+  _valueText: {fileID: 8835503333252374050}
 --- !u!1 &5919994640701994426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2579,6 +2669,7 @@ GameObject:
   - component: {fileID: 1922792146845011216}
   - component: {fileID: 5815012717796507564}
   - component: {fileID: 1433567401884250517}
+  - component: {fileID: 6200196452524462268}
   m_Layer: 5
   m_Name: DiceVisual
   m_TagString: Untagged
@@ -2644,6 +2735,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6200196452524462268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6702634602198433517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d86bbb9589fed7742abdb7e27f238784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemVisualView
+  _icon: {fileID: 1433567401884250517}
+  _valueText: {fileID: 841881112151150090}
 --- !u!1 &6905347204774342822
 GameObject:
   m_ObjectHideFlags: 0
@@ -3194,6 +3299,16 @@ MonoBehaviour:
   - {fileID: 182769523348532106}
   - {fileID: 3842111050018330855}
   _finishButton: {fileID: 520608236921974720}
+  _offerVisuals:
+  - {fileID: 2038571864957943008}
+  - {fileID: 6630699285707818385}
+  - {fileID: 6789987814728637866}
+  _inventoryVisuals:
+  - {fileID: 6200196452524462268}
+  - {fileID: 1539480581556342087}
+  - {fileID: 8996157797430936993}
+  - {fileID: 2031856312657482105}
+  - {fileID: 3195708987911056899}
 --- !u!1 &8309397313394021395
 GameObject:
   m_ObjectHideFlags: 0
@@ -3205,6 +3320,7 @@ GameObject:
   - component: {fileID: 4817162927412863969}
   - component: {fileID: 1008140348223156462}
   - component: {fileID: 4169751564964827845}
+  - component: {fileID: 2031856312657482105}
   m_Layer: 5
   m_Name: DiceVisual
   m_TagString: Untagged
@@ -3270,3 +3386,17 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2031856312657482105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8309397313394021395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d86bbb9589fed7742abdb7e27f238784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemVisualView
+  _icon: {fileID: 4169751564964827845}
+  _valueText: {fileID: 2975156539810278720}
