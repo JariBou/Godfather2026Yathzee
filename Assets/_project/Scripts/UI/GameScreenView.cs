@@ -16,7 +16,7 @@ namespace _project.Scripts.UI
         [Header("Actions")]
         [SerializeField] private Button _rollButton;
 
-        [Header("Visuels des d�s")]
+        [Header("Visuels des dés")]
         [SerializeField] private ItemVisualView[] _inventoryDice = new ItemVisualView[5];
 
         [SerializeField] private ItemVisualView _rollingDie;
@@ -25,6 +25,9 @@ namespace _project.Scripts.UI
 
         [Header("Visuels des passifs")]
         [SerializeField] private ItemVisualView[] _inventoryPassives = new ItemVisualView[3];
+
+
+        [SerializeField] private ItemTooltipTrigger[] _inventoryDiceTooltips = new ItemTooltipTrigger[5];
 
         [SerializeField] private GameObject _background;
         [SerializeField] private GameManager _gameManager;
@@ -149,6 +152,12 @@ namespace _project.Scripts.UI
                     SetInventoryDie(i, dice.Icon, Color.white, "");
                 else
                     ClearInventoryDie(i);
+
+                if (i < _inventoryDiceTooltips.Length &&
+                    _inventoryDiceTooltips[i] != null)
+                {
+                    _inventoryDiceTooltips[i].SetData(dice);
+                }
             }
 
             for (int i = 0; i < _inventoryPassives.Length; i++)
