@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace _project.Scripts.UI
@@ -22,6 +23,7 @@ namespace _project.Scripts.UI
         public event Action<int> OfferClicked;
         public event Action<int> InventorySlotClicked;
         public event Action FinishRequested;
+        public UnityEvent FinishRequestedUnity;
 
         private void OnEnable()
         {
@@ -39,6 +41,11 @@ namespace _project.Scripts.UI
 
             if (_finishButton != null)
                 _finishButton.onClick.AddListener(HandleFinishClicked);
+            if (this.gameObject.name =="DiceShopScreen")
+                FindAnyObjectByType<GameManager>().ChangeStateToDiceShop();
+            else
+                FindAnyObjectByType<GameManager>().ChangeStateToRelicShop();
+            FindAnyObjectByType<ShopManager>().RefreshShop();
         }
 
         private void OnDisable()
@@ -72,6 +79,7 @@ namespace _project.Scripts.UI
         private void HandleFinishClicked()
         {
             FinishRequested?.Invoke();
+            FinishRequestedUnity?.Invoke();
         }
 
         public void SetOffer(int index, Sprite sprite, Color tint, string value = "")

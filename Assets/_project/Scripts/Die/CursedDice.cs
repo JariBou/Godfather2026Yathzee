@@ -1,18 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using _project.Scripts.ScriptableObjects.Dice.Effects;
 using UnityEngine;
 
 namespace _project.Scripts.Die
 {
-    public class CursedDice : Dice
+    public class CursedDice : DiceBase
     {
-        public new List<int> faces = new() { 1, 1, 1, 1, 1, 1000 };
-
-
-        public override void ApplyEffect(int faceScore, Object gamestate)
+        [SerializeField] protected CursedDiceLingeringEffect effect;
+        
+    #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        public override async Awaitable ApplyEffect(GameState gamestate)
+    #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
-            if (faceScore == 1)
+            int upFaceValue = GetUpFaceValue();
+            gamestate.AddScore(upFaceValue);
+            if (upFaceValue == 1)
             {
-            
+                gamestate.AddEffect(effect);
             }
         }
     }

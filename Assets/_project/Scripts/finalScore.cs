@@ -22,24 +22,25 @@ public class finalScore : MonoBehaviour
 
     public float FinalScore()
     {
-        float score = diceScore.Sum() * finalMultiplier;
-        Objects goatSkull = null;
-
-        foreach (Objects obj in GetComponent<inventoryBehaviour>().ObjectsInventory)
-        {
-            if (obj is goatSkull) 
-            {
-                goatSkull = (goatSkull)obj;
-                continue;
-            }
-            score = obj.ApplyScoreEffect(null, score);
-        }
-        if (goatSkull != null) 
-        {
-            score = goatSkull.ApplyScoreEffect(null, score);
-        }
-
-
-        return score;
+        // float score = diceScore.Sum() * finalMultiplier;
+        // Objects goatSkull = null;
+        //
+        // foreach (Objects obj in GetComponent<inventoryBehaviour>().ObjectsInventory)
+        // {
+        //     if (obj is goatSkull) 
+        //     {
+        //         goatSkull = (goatSkull)obj;
+        //         continue;
+        //     }
+        //     score = obj.ApplyEffect(null);
+        // }
+        // if (goatSkull != null) 
+        // {
+        //     score = goatSkull.ApplyEffect(null);
+        // }
+        //
+        //
+        // return score;
+        return 0;
     }
 }

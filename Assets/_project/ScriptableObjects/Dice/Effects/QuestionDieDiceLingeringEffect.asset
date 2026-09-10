@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4b64a036c9478587f3739d65091a2d, type: 3}
+  m_Name: QuestionDieDiceLingeringEffect
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Effects.QuestionDieDiceLingeringEffect
+  priority: 3
+  _diceDatas:
+    _serializedList:
+    - Key: {fileID: 11400000, guid: 500109a496ed25146b3165bbf2526d16, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 39ea4dc37ea2d2b4095d4f28c7f7c110, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 518c91ead4667a74d8634e9a7b8c323d, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 8e6949d85a6214f489a76949e0aae433, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 80d45a39ab8bd5647bcd0c2d04e8426d, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: edd35df10a3c11541b1344764e557c47, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: e29c5e4e86250a8429d98bb485d641c9, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 1b4898e1deb0c434e9d7f9a543ce44d1, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 13f46184c98c4884e95bbc95e00a5de0, type: 2}
+      Value: 1

@@ -2,14 +2,17 @@
 
 namespace _project.Scripts.Die
 {
-    public class Dice42 : Dice
+    public class Dice42 : DiceBase
     {
-        public override void ApplyEffect(int faceScore, Object gamestate)
+        public override async Awaitable ApplyEffect(GameState gamestate)
         {
-            if (faceScore == 42)
+            int upFaceValue = GetUpFaceValue();
+            if (upFaceValue == 42)
             {
-                //gamestate.ThrowNewDice(new Dice42());
+                gamestate.ActiveDice.Push(await gamestate.Launcher.LaunchDieAndWaitForStop(diceData.Prefab));
             }
+            gamestate.AddScore(upFaceValue);
+            Debug.Log("Applying Dice42 Effect");
         }
     }
 }
