@@ -278,6 +278,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &543857343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3827705350026562025, guid: 36e2790f51512954b980e4d52714f097, type: 3}
+  m_PrefabInstance: {fileID: 3434267730032379394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &544364893 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5700326576125891498, guid: 3be2bf5d2cb3db549a4bffc3955832d7, type: 3}
@@ -822,17 +827,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be7d211ae8c85f4c93bb42ecac0a372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.GameOverView
---- !u!114 &2020255689 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7086505224951616749, guid: 36e2790f51512954b980e4d52714f097, type: 3}
-  m_PrefabInstance: {fileID: 3434267730032379394}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f9bf104c5d6e764ab4ee86bd716aa14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.MainMenuView
 --- !u!1 &2142732848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,13 +1406,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1753276498}
     m_Modifications:
+    - target: {fileID: 3098572028431451916, guid: 36e2790f51512954b980e4d52714f097, type: 3}
+      propertyPath: m_isOrthographic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098572028431451916, guid: 36e2790f51512954b980e4d52714f097, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 3098572028431451916, guid: 36e2790f51512954b980e4d52714f097, type: 3}
+      propertyPath: m_ActiveFontFeatures.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3827705350026562025, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: m_Name
       value: MainMenuScreen
       objectReference: {fileID: 0}
     - target: {fileID: 3827705350026562025, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3868838963018742507, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: m_Pivot.x
@@ -1515,7 +1521,7 @@ PrefabInstance:
     - target: {fileID: 7086505224951616749, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: PlayRequestedUnity.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2020255689}
+      objectReference: {fileID: 543857343}
     - target: {fileID: 7086505224951616749, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: PlayRequestedUnity.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1530,7 +1536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7086505224951616749, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: PlayRequestedUnity.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_enabled
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 7086505224951616749, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: PlayRequestedUnity.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -1538,7 +1544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7086505224951616749, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: PlayRequestedUnity.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: _project.Scripts.UI.MainMenuView, Assembly-CSharp
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7086505224951616749, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: PlayRequestedUnity.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -1859,7 +1865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4305539919422647888, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4606632588136502440, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
       propertyPath: _valueText
