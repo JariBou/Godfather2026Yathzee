@@ -1,19 +1,13 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace _project.Scripts.Die
 {
-    public class Dice42Trophy : Dice
+    public class Dice42Trophy : DiceBase
     {
-        public new List<int> faces = new() { 1, 1, 42, 42, 42, 42 };
-
-
-        public override void ApplyEffect(int faceScore, Object gamestate)
+    #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        public override async Awaitable ApplyEffect(GameState gamestate)
+    #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
-            if (faceScore == 42)
-            {
-                //gamestate.ThrowNewDice(new Dice42Trophy());
-            }
         }
     }
 }

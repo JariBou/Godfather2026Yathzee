@@ -3,17 +3,14 @@ using UnityEngine;
 
 namespace _project.Scripts.Die
 {
-    public class blackCloverDice : Dice
+    public class blackCloverDice : DiceBase
     {
         public new List<int> faces = new() { 20, 40, 80, 100, 140, 1 };
 
 
-        public override void ApplyEffect(int faceScore, Object gamestate)
+        public override Awaitable ApplyEffect(GameState gamestate)
         {
-            if (faceScore == 1)
-            {
-
-            }
+            return null;
         }
     }
 }
