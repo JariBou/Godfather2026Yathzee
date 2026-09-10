@@ -238,7 +238,7 @@ Transform:
   m_GameObject: {fileID: 404021810}
   serializedVersion: 2
   m_LocalRotation: {x: 0.99479216, y: 0, z: 0, w: 0.10192455}
-  m_LocalPosition: {x: 0, y: 16.98, z: -0.08}
+  m_LocalPosition: {x: 0, y: 11.389999, z: -1.5300001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -277,11 +277,11 @@ MonoBehaviour:
   _scoreData: {fileID: 0}
   _diceLauncher: {fileID: 404021811}
   _inventory:
-  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
-  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
-  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
-  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
-  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
+  - {fileID: 11400000, guid: 8e6949d85a6214f489a76949e0aae433, type: 2}
+  - {fileID: 11400000, guid: 8e6949d85a6214f489a76949e0aae433, type: 2}
+  - {fileID: 11400000, guid: 8e6949d85a6214f489a76949e0aae433, type: 2}
+  - {fileID: 11400000, guid: 8e6949d85a6214f489a76949e0aae433, type: 2}
+  - {fileID: 11400000, guid: 8e6949d85a6214f489a76949e0aae433, type: 2}
   _relics: []
   GameStateResolved:
     m_PersistentCalls:
@@ -452,7 +452,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 48.9, y: 37.7, z: 1}
-  m_Center: {x: 0, y: 0, z: 8}
+  m_Center: {x: 0, y: 0, z: 6}
 --- !u!4 &848276295
 Transform:
   m_ObjectHideFlags: 0
@@ -505,7 +505,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 48.9, y: 37.7, z: 1}
-  m_Center: {x: 0, y: 0, z: 8}
+  m_Center: {x: 0, y: 0, z: 6}
 --- !u!4 &914400385
 Transform:
   m_ObjectHideFlags: 0
@@ -836,7 +836,7 @@ Transform:
   m_GameObject: {fileID: 1290943747}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 17.6, z: 0}
+  m_LocalPosition: {x: 0, y: 12.01, z: -1.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace _project.Scripts.Die
 {
-    public class CursedDice : DiceBase
+    public class HealerDie : DiceBase
     {
-        [SerializeField] protected CursedDiceLingeringEffect effect;
+        [SerializeField] protected HealerDieLingeringEffect effect;
         
     #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public override async Awaitable ApplyEffect(GameState gamestate)
