@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HealerDieLingeringEffect
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Effects.HealerDieLingeringEffect
   priority: 3
-  _diceData: {fileID: 11400000, guid: 1b4898e1deb0c434e9d7f9a543ce44d1, type: 2}
+  _diceData: {fileID: 11400000, guid: 500109a496ed25146b3165bbf2526d16, type: 2}

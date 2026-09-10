@@ -7,6 +7,7 @@ using _project.Scripts.ScriptableObjects;
 using _project.Scripts.ScriptableObjects.Dice;
 using _project.Scripts.ScriptableObjects.Relics;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace _project.Scripts
 {
@@ -15,6 +16,7 @@ namespace _project.Scripts
         public DiceLauncher Launcher { get; private set; }
         public ScoreDataScriptableObject ScoreData { get; private set; }
         public int CurrentRoundScore { get; private set; }
+        public int TargetRoundScore { get; private set; }
         public Stack<DiceBase> ActiveDice { get; private set; }
         public List<DiceBase> InGameDice { get; private set; } = new();
         private Dictionary<EffectPriority, Stack<EffectBase>> Effects { get; set; } = new();
@@ -22,6 +24,7 @@ namespace _project.Scripts
         public List<RelicScriptableObjectBase> Relics { get; set; }
 
         public event Action<GameState> GameStateResolved;
+        public UnityEvent<int, int> ScoreUpdated;
 
 
         public GameState(DiceLauncher diceLauncher, ScoreDataScriptableObject scoreData, List<DiceDataScriptableObject> inventory,
@@ -38,21 +41,25 @@ namespace _project.Scripts
         public void AddScore(int value)
         {
             CurrentRoundScore += value;
+            ScoreUpdated?.Invoke(CurrentRoundScore, TargetRoundScore);
         }
 
         public void MultiplyScore(float value)
         {
             CurrentRoundScore = Mathf.CeilToInt(CurrentRoundScore * value);
+            ScoreUpdated?.Invoke(CurrentRoundScore, TargetRoundScore);
         }
 
         public void SetScore(int value)
         {
             CurrentRoundScore = value;
+            ScoreUpdated?.Invoke(CurrentRoundScore, TargetRoundScore);
         }
         
         public void SetScore(float value)
         {
             CurrentRoundScore = Mathf.CeilToInt(value);
+            ScoreUpdated?.Invoke(CurrentRoundScore, TargetRoundScore);
         }
 
         public void AddEffect(EffectBase effect)

@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: 3ec0aac3739012b45a1832857225e618
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8471597924581005366
+    second: T_Dice_Big_42_0
+  - first:
+      213: 4899852020603436374
+    second: T_Dice_Big_42_1
+  - first:
+      213: 7853256513902108461
+    second: T_Dice_Big_42_2
+  - first:
+      213: 4165502543912242237
+    second: T_Dice_Big_42_3
+  - first:
+      213: 5259862938460424475
+    second: T_Dice_Big_42_4
+  - first:
+      213: -2254829167219700555
+    second: T_Dice_Big_42_5
+  - first:
+      213: 5851771554095987480
+    second: T_Dice_Big_42_6
+  - first:
+      213: 4663271131610344964
+    second: T_Dice_Big_42_7
+  - first:
+      213: 5189659990755995585
+    second: T_Dice_Big_42_8
+  - first:
+      213: -1775380784245611630
+    second: T_Dice_Big_42_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: T_Dice_Big_42_0
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 525
+        width: 143
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac7a9617296de6a80800000000000000
+      internalID: -8471597924581005366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Dice_Big_42_1
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 525
+        width: 143
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d3c04c375cff340800000000000000
+      internalID: 4899852020603436374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Dice_Big_42_2
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 525
+        width: 143
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f5829e03f5cfc60800000000000000
+      internalID: 7853256513902108461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Dice_Big_42_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 409
+        width: 143
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c00e07e76dec930800000000000000
+      internalID: 4165502543912242237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Dice_Big_42_4
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 409
+        width: 143
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b190d2e7979cef840800000000000000
+      internalID: 5259862938460424475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Dice_Big_42_5
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 409
+        width: 143
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc0eaaa1dc35b0e0800000000000000
+      internalID: -2254829167219700555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Dice_Big_42_6
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 157
+        width: 143
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81b70a4793ba53150800000000000000
+      internalID: 5851771554095987480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Dice_Big_42_7
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 121
+        width: 143
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ee7fa136447b040800000000000000
+      internalID: 4663271131610344964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Dice_Big_42_8
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 96
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf611ef340650840800000000000000
+      internalID: 5189659990755995585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Dice_Big_42_9
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 96
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2936cf545949c57e0800000000000000
+      internalID: -1775380784245611630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      T_Dice_Big_42_0: -8471597924581005366
+      T_Dice_Big_42_1: 4899852020603436374
+      T_Dice_Big_42_2: 7853256513902108461
+      T_Dice_Big_42_3: 4165502543912242237
+      T_Dice_Big_42_4: 5259862938460424475
+      T_Dice_Big_42_5: -2254829167219700555
+      T_Dice_Big_42_6: 5851771554095987480
+      T_Dice_Big_42_7: 4663271131610344964
+      T_Dice_Big_42_8: 5189659990755995585
+      T_Dice_Big_42_9: -1775380784245611630
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

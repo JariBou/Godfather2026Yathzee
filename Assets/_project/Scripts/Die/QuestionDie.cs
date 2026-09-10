@@ -18,12 +18,15 @@ namespace _project.Scripts.Die
             switch (upFaceValue)
             {
                 case -1:
+                    SpawnScoreEffect(50);
                     gamestate.AddEffect(_diceEffect);
                     break;
                 case -2:
+                    SpawnScoreEffect(50);
                     gamestate.AddEffect(_relicEffect);
                     break;
                 default:
+                    SpawnScoreEffect(upFaceValue);
                     gamestate.AddScore(upFaceValue);
                     break;
             }

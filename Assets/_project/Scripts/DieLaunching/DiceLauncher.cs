@@ -95,60 +95,14 @@ namespace _project.Scripts.DieLaunching
             }
             return activeDiceList;
         }
-        
-        [Button(enabledMode: EButtonEnableMode.Playmode)]
-        public void LaunchDice()
-        {
-            LaunchDice(_dicePrefab);
-        }
 
         private void LaunchedDieBroadcasterOnStoppedMoving(DiceBase diceBase)
         {
             Debug.Log($"A Die has stopped moving, face value is: {diceBase.GetUpFaceValue()}");
         }
 
-        [Button(enabledMode: EButtonEnableMode.Playmode)]
-        public void WaveLaunchDice()
-        {
-            _ = DelayedWaveLaunch();
-        }
-
-        private async Awaitable DelayedWaveLaunch()
-        {
-            for (int i = 0; i < _waveLaunchCount; i++)
-            {
-                LaunchDice();
-                await Awaitable.WaitForSecondsAsync(_waveLaunchDelay);
-            }
-        }
-
         private void OnDrawGizmos()
         {
-            // float angle = _randAngleMax*2;
-            // float rayRange = 10.0f;
-            // float halfFOV = angle / 2.0f;
-            // float coneDirection = 180;
-            //
-            // Quaternion upRayRotation = Quaternion.AngleAxis(-halfFOV + coneDirection, Vector3.up);
-            // Quaternion downRayRotation = Quaternion.AngleAxis(halfFOV + coneDirection, Vector3.up);
-            //
-            // Vector3 upRayDirection = upRayRotation * transform.right * rayRange;
-            // Vector3 downRayDirection = downRayRotation * transform.right * rayRange;
-            //
-            // Gizmos.DrawRay(transform.position, upRayDirection);
-            // Gizmos.DrawRay(transform.position, downRayDirection);
-            // Gizmos.DrawLine(transform.position + downRayDirection, transform.position + upRayDirection);
-            
-            //
-            // float angle = Vector3.Angle(transform.forward, transform.up);
-            // // Quaternion.AngleAxis(angle, transform.right);
-            //
-            // Gizmos.matrix = Matrix4x4.TRS(transform.position, Quaternion.AngleAxis(angle, transform.right), Vector3.one);
-            // Gizmos.DrawFrustum(Vector3.zero, _randAngleMax, 10f, 0f, 1f);
-            // Gizmos.matrix = Matrix4x4.identity;
-            // // Gizmos.DrawFrustum(transform.position, _randAngleMax, 50f, 0f, 16/9f);
-            //
-
             Color color = Gizmos.color;
             Gizmos.color = Color.red;
             Gizmos.DrawLine(transform.position, transform.position + transform.up * 5f);
