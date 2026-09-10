@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using _project.Scripts.Die;
 using _project.Scripts.DieLaunching;
 using _project.Scripts.ScriptableObjects;
@@ -36,6 +37,8 @@ namespace _project.Scripts
 
         public UnityEvent GameStateResolved;
         public UnityEvent<int, int> ScoreUpdated;
+        private Awaitable _speedUpIfTimeExceededTask;
+        private CancellationTokenSource _speedUpIfTimeExceededCancellationTokenSource = new();
 
         public State CurrentState => _state;
 
@@ -103,6 +106,10 @@ namespace _project.Scripts
             _gameState.GameStateResolved += GameStateOnGameStateResolved;
             _gameState.ScoreUpdated += OnScoreUpdated;
             _ = _gameState.Resolve();
+
+            // _speedUpIfTimeExceededCancellationTokenSource = new CancellationTokenSource();
+            _speedUpActivated = true;
+            _speedUpIfTimeExceededTask = SpeedUpIfTimeExceeded(6f, 2f);
         }
 
         private void OnScoreUpdated(int arg1, int arg2)
@@ -110,9 +117,35 @@ namespace _project.Scripts
             ScoreUpdated?.Invoke(arg1, arg2);
         }
 
-        private void GameStateOnGameStateResolved(GameState obj)
+        private bool _speedUpActivated = false;
+        private async Awaitable SpeedUpIfTimeExceeded(float delay, float newTimeScale)
         {
-            Debug.Log($"Game state was resolved (score: {obj.CurrentRoundScore})");
+            if (!_speedUpActivated) return;
+            await Awaitable.WaitForSecondsAsync(delay);
+            if (!_speedUpActivated) return;
+            // if (cancellationToken.IsCancellationRequested) return;
+            
+            Debug.Log($"GameManager::SpeedUpIfTimeExceeded: Speeding up time to {newTimeScale}");
+            Time.timeScale = newTimeScale;
+
+            if (newTimeScale >= 4) return;
+            _speedUpIfTimeExceededTask = SpeedUpIfTimeExceeded(3f * Time.timeScale, Time.timeScale+1);
+        } 
+
+        private void GameStateOnGameStateResolved(GameState gameState)
+        {
+            _speedUpIfTimeExceededTask?.Cancel();
+            _speedUpActivated = false;
+            Debug.Log($"GameManager::GameStateOnGameStateResolved: setting time to 1");
+            Time.timeScale = 1;
+            
+            if (gameState.CurrentRoundScore < gameState.TargetRoundScore)
+            {
+                Debug.LogWarning($"Game state was resolved: You lost (score: {gameState.CurrentRoundScore}/{gameState.TargetRoundScore})");
+                return;
+            }
+            
+            Debug.Log($"Game state was resolved (score: {gameState.CurrentRoundScore}/{gameState.TargetRoundScore})");
             _ = DelayedGameStateResolved(3f);
         }
 

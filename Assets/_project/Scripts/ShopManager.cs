@@ -41,13 +41,10 @@ namespace _project.Scripts
             randItemPool = randItemPool.OrderBy(x=>Random.value).ToList();
             for (int i = 0; i < _proposedRelicCount; i++)
             { 
-                int randomItem = Random.Range(0, randItemPool.Count);
-                RelicScriptableObjectBase randItem = randItemPool[randomItem];
+                RelicScriptableObjectBase randItem = randItemPool[i];
                 _itemPool[randItem] -= 1;
                 _shopItemPool.Add(randItem);
             }
-        
-
             
             List<DiceDataScriptableObject> rantDicePool = new();
             _shopDicePool.Clear();
@@ -61,8 +58,7 @@ namespace _project.Scripts
             rantDicePool = rantDicePool.OrderBy(x => Random.value).ToList();
             for (int i = 0; i < _proposedDiceCount; i++)
             {
-                int randomItem = Random.Range(0, rantDicePool.Count);
-                DiceDataScriptableObject randItem = rantDicePool[randomItem];
+                DiceDataScriptableObject randItem = rantDicePool[i];
                 dicePool[randItem] -= 1;
                 _shopDicePool.Add(randItem);
             }
@@ -84,16 +80,38 @@ namespace _project.Scripts
 
         public void TakeDice(int shopIndex, int invIndex)
         {
-            (_shopDicePool[shopIndex], _gameManager.Inventory[invIndex]) = (_gameManager.Inventory[invIndex], _shopDicePool[shopIndex]);
-            
-            Debug.Log("Dés" + shopIndex + invIndex);
+            Debug.Log($"Taking dice from shop '{shopIndex}' to inventory '{invIndex}'");
 
+            if (!(shopIndex >= 0 && shopIndex < _shopDicePool.Count))
+            {
+                Debug.LogError($"Shop Index was out of bounds: Expected [0, {_shopDicePool.Count - 1}] was '{shopIndex}'");
+                return;
+            }
+            if (!(invIndex >= 0 && invIndex < _gameManager.Inventory.Count))
+            {
+                Debug.LogError($"Inventory Index was out of bounds: Expected [0, {_gameManager.Inventory.Count - 1}] was '{invIndex}'");
+                return;
+            }
+            
+            (_shopDicePool[shopIndex], _gameManager.Inventory[invIndex]) = (_gameManager.Inventory[invIndex], _shopDicePool[shopIndex]);
         }
 
         public void TakeItem(int shopIndex, int invIndex)
         {
+            Debug.Log($"Taking relic from shop '{shopIndex}' to inventory '{invIndex}'");
+            
+            if (!(shopIndex >= 0 && shopIndex < _shopDicePool.Count))
+            {
+                Debug.LogError($"Shop Index was out of bounds: Expected [0, {_shopDicePool.Count - 1}] was '{shopIndex}'");
+                return;
+            }
+            if (!(invIndex >= 0 && invIndex < _gameManager.Inventory.Count))
+            {
+                Debug.LogError($"Inventory Index was out of bounds: Expected [0, {_gameManager.Inventory.Count - 1}] was '{invIndex}'");
+                return;
+            }
+            
             (_shopItemPool[shopIndex], _gameManager.Relics[invIndex]) = (_gameManager.Relics[invIndex], _shopItemPool[shopIndex]);
-            Debug.Log("Item"+shopIndex + invIndex);
         }
 
         public void ChooseShop(int index)
