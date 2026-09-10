@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _project.Scripts.Effects.UIScore;
+using UnityEngine;
 
 namespace _project.Scripts.ScriptableObjects.Relics.Effects
 {
@@ -14,6 +15,8 @@ namespace _project.Scripts.ScriptableObjects.Relics.Effects
             int countOfSixs = scoreString.Length - scoreString.Replace("6", "").Length;
             if (countOfSixs == 3)
             {
+                ScoreMultiplierVfxManager vfxManager = FindFirstObjectByType<ScoreMultiplierVfxManager>();
+                vfxManager.ShowVfx("x 666");
                 gameState.MultiplyScore(666f);
             }
         }

@@ -13,5 +13,10 @@ namespace _project.Scripts.ScriptableObjects.OtherEffects
         {
             gameState.MultiplyScore(_multiplier);
         }
+
+        public override string GetEffectDisplayIndicator()
+        {
+            return $"x {_multiplier}";
+        }
     }
 }

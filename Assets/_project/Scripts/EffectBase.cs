@@ -10,5 +10,10 @@ namespace _project.Scripts
         public EffectPriority Priority => priority;
 
         public abstract Awaitable ApplyEffect(GameState gameState);
+
+        public virtual string GetEffectDisplayIndicator()
+        {
+            return "EFFECT";
+        }
     }
 }

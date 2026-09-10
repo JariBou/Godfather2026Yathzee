@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using _project.Scripts.Effects.UIScore;
 using AYellowpaper.SerializedCollections;
 using UnityEngine;
 
@@ -20,6 +21,12 @@ namespace _project.Scripts.ScriptableObjects.Relics.Effects
             EffectBase possibleOutcome = _possibleOutcomes[outcomesKey];
             if (possibleOutcome == null) return;
             
+            string effectDisplayIndicator = possibleOutcome.GetEffectDisplayIndicator();
+            if (effectDisplayIndicator != "")
+            {
+                ScoreMultiplierVfxManager vfxManager = FindFirstObjectByType<ScoreMultiplierVfxManager>();
+                vfxManager.ShowVfx(effectDisplayIndicator);
+            }
             await possibleOutcome.ApplyEffect(gameState);
         }
     }

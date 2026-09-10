@@ -12,6 +12,7 @@ namespace _project.Scripts
 {
     public class GameState
     {
+        private const float EffectApplicationDelay = 0.1f;
         public DiceLauncher Launcher { get; private set; }
         public ScoreDataScriptableObject ScoreData { get; private set; }
         public int CurrentRoundScore { get; private set; }
@@ -84,12 +85,13 @@ namespace _project.Scripts
             {
                 relic.ApplyEffect(this);
             }
-            
+
             while (ActiveDice.Count > 0)
             {
                 DiceBase dice = ActiveDice.Pop();
                 InGameDice.Add(dice);
                 await dice.ApplyEffect(this);
+                await Awaitable.WaitForSecondsAsync(EffectApplicationDelay);
             }
 
         #pragma warning disable CS0612 // Type or member is obsolete
@@ -102,9 +104,12 @@ namespace _project.Scripts
                     {
                         EffectBase effect = effectStack.Pop();
                         await effect.ApplyEffect(this);
+                        await Awaitable.WaitForSecondsAsync(EffectApplicationDelay);
                     }
                 }
             }
+            
+            await Awaitable.WaitForSecondsAsync(EffectApplicationDelay * 3f);
 
             await Awaitable.MainThreadAsync();
             GameStateResolved?.Invoke(this);

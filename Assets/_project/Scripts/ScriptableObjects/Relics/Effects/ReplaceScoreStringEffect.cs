@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _project.Scripts.Effects.UIScore;
+using UnityEngine;
 
 namespace _project.Scripts.ScriptableObjects.Relics.Effects
 {
@@ -15,6 +16,8 @@ namespace _project.Scripts.ScriptableObjects.Relics.Effects
         {
             int score = gameState.CurrentRoundScore;
             string scoreString = score.ToString();
+            ScoreMultiplierVfxManager vfxManager = FindFirstObjectByType<ScoreMultiplierVfxManager>();
+            vfxManager.ShowVfx($"{_oldChar} -> {_newChar}");
             scoreString = scoreString.Replace(_oldChar, _newChar);
             gameState.SetScore(int.Parse(scoreString));
         }
