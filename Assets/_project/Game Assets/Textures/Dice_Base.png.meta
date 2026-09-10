@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2f95b433f8383ab4193f66e9b079c8ba
+guid: c043d3e1c4acfc14fb1a083db6d7af41
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5094444949648019234
-    second: Dice_DefaultMaterial_MaskMap_0
+      213: -7431781709622455005
+    second: Dice_DefaultMaterial_BaseMap 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dice_DefaultMaterial_MaskMap_0
+      name: Dice_DefaultMaterial_BaseMap 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22f8d8fa0ba13b640800000000000000
-      internalID: 5094444949648019234
+      spriteID: 32555bd09e10dd890800000000000000
+      internalID: -7431781709622455005
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dice_DefaultMaterial_MaskMap_0: 5094444949648019234
+      Dice_DefaultMaterial_BaseMap 1_0: -7431781709622455005
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

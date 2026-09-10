@@ -1,76 +1,67 @@
 fileFormatVersion: 2
-guid: f5e155da9ad22a649a6f685670eac5d3
+guid: a406e70b7849d944fb78cbdb87d43eb2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5351209019864228482
-    second: Dice_02_0
+      213: -2051516395378244729
+    second: T_Dice_Emerald_0
   - first:
-      213: 4781741545816492518
-    second: Dice_02_1
+      213: 4991547129918591859
+    second: T_Dice_Emerald_1
   - first:
-      213: 8083939230856104398
-    second: Dice_02_2
+      213: -5253253343233065149
+    second: T_Dice_Emerald_2
   - first:
-      213: 168305139482896181
-    second: Dice_02_3
+      213: -4650935912597262821
+    second: T_Dice_Emerald_3
   - first:
-      213: -8195714758673356221
-    second: Dice_02_4
+      213: -4823643995833909941
+    second: T_Dice_Emerald_4
   - first:
-      213: 6219173136071056954
-    second: Dice_02_5
+      213: 8671324077794666232
+    second: T_Dice_Emerald_5
   - first:
-      213: -4848057428306329618
-    second: Dice_02_6
+      213: -4002868703526451889
+    second: T_Dice_Emerald_6
   - first:
-      213: 8674009804183840573
-    second: Dice_02_7
+      213: -2439087052892577946
+    second: T_Dice_Emerald_7
   - first:
-      213: 1912496601243642591
-    second: Dice_02_8
+      213: 7881637236926432168
+    second: T_Dice_Emerald_8
   - first:
-      213: 7820975546033000167
-    second: Dice_02_9
+      213: -3691541279989893632
+    second: T_Dice_Emerald_9
   - first:
-      213: 8675394618900543505
-    second: Dice_02_10
+      213: 1839601743704024031
+    second: T_Dice_Emerald_10
   - first:
-      213: 7005406804622914509
-    second: Dice_02_11
+      213: -8727958646210406969
+    second: T_Dice_Emerald_11
   - first:
-      213: 254728182063806584
-    second: Dice_02_12
+      213: -3000667094222148034
+    second: T_Dice_Emerald_12
   - first:
-      213: 3336071256138373510
-    second: Dice_02_13
+      213: -4270477878340846220
+    second: T_Dice_Emerald_13
   - first:
-      213: -857076624195123418
-    second: Dice_02_14
+      213: 2558217762483486660
+    second: T_Dice_Emerald_14
   - first:
-      213: 257915596813396809
-    second: Dice_02_15
+      213: -5340845271975392179
+    second: T_Dice_Emerald_15
   - first:
-      213: -5102111426067762953
-    second: Dice_02_16
+      213: -2425956014371088504
+    second: T_Dice_Emerald_16
   - first:
-      213: -8851352119981452796
-    second: Dice_02_17
-  - first:
-      213: -5262251572997863795
-    second: Dice_02_18
-  - first:
-      213: 8227277072955727622
-    second: Dice_02_19
-  - first:
-      213: -7223198807191807816
-    second: Dice_02_20
+      213: 8984760434180137308
+    second: T_Dice_Emerald_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
-    sRGBTexture: 0
+    sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -160,13 +151,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dice_02_0
+      name: T_Dice_Emerald_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 579
-        width: 72
-        height: 72
+        x: 110
+        y: 570
+        width: 122
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 282afdb6040534a40800000000000000
-      internalID: 5351209019864228482
+      spriteID: 783079235bc8783e0800000000000000
+      internalID: -2051516395378244729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_1
+      name: T_Dice_Emerald_1
       rect:
         serializedVersion: 2
-        x: 225
-        y: 579
-        width: 72
-        height: 72
+        x: 452
+        y: 570
+        width: 122
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +188,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e98e16e9982c5240800000000000000
-      internalID: 4781741545816492518
+      spriteID: 3731b661ba9854540800000000000000
+      internalID: 4991547129918591859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_2
+      name: T_Dice_Emerald_2
       rect:
         serializedVersion: 2
-        x: 567
-        y: 579
-        width: 72
-        height: 72
+        x: 796
+        y: 570
+        width: 122
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec9c50166ebef2070800000000000000
-      internalID: 8083939230856104398
+      spriteID: 34fb571dae1b817b0800000000000000
+      internalID: -5253253343233065149
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_3
+      name: T_Dice_Emerald_3
       rect:
         serializedVersion: 2
-        x: 729
-        y: 573
-        width: 72
-        height: 72
+        x: 110
+        y: 471
+        width: 122
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,20 +232,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53720c4f1a0f55200800000000000000
-      internalID: 168305139482896181
+      spriteID: b1e6880ed6e847fb0800000000000000
+      internalID: -4650935912597262821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_4
+      name: T_Dice_Emerald_4
       rect:
         serializedVersion: 2
-        x: 911
-        y: 573
-        width: 72
-        height: 72
+        x: 452
+        y: 472
+        width: 122
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +254,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 34a29d889d8f24e80800000000000000
-      internalID: -8195714758673356221
+      spriteID: b4dbf51b759fe0db0800000000000000
+      internalID: -4823643995833909941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_5
+      name: T_Dice_Emerald_5
       rect:
         serializedVersion: 2
-        x: 476
-        y: 484
-        width: 72
-        height: 72
+        x: 796
+        y: 471
+        width: 122
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -285,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3eda244401fe4650800000000000000
-      internalID: 6219173136071056954
+      spriteID: 8f62e3d5e4bb65870800000000000000
+      internalID: 8671324077794666232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_6
+      name: T_Dice_Emerald_6
       rect:
         serializedVersion: 2
-        x: 820
-        y: 478
-        width: 72
-        height: 72
+        x: 110
+        y: 373
+        width: 122
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,20 +298,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eef7b1f747d38bcb0800000000000000
-      internalID: -4848057428306329618
+      spriteID: f4507cb4f14f278c0800000000000000
+      internalID: -4002868703526451889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_7
+      name: T_Dice_Emerald_7
       rect:
         serializedVersion: 2
-        x: 43
-        y: 388
-        width: 72
-        height: 72
+        x: 452
+        y: 373
+        width: 122
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,20 +320,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d3722a4c5f5406870800000000000000
-      internalID: 8674009804183840573
+      spriteID: 66f551c8f3f962ed0800000000000000
+      internalID: -2439087052892577946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_8
+      name: T_Dice_Emerald_8
       rect:
         serializedVersion: 2
-        x: 225
-        y: 388
-        width: 72
-        height: 72
+        x: 796
+        y: 373
+        width: 122
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -351,20 +342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fdae447a68d8a8a10800000000000000
-      internalID: 1912496601243642591
+      spriteID: 8a3cd7bee43316d60800000000000000
+      internalID: 7881637236926432168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_9
+      name: T_Dice_Emerald_9
       rect:
         serializedVersion: 2
-        x: 390
-        y: 388
-        width: 72
-        height: 72
+        x: 110
+        y: 199
+        width: 122
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,20 +364,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ee405262dfa98c60800000000000000
-      internalID: 7820975546033000167
+      spriteID: 006f284b3c205ccc0800000000000000
+      internalID: -3691541279989893632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_10
+      name: T_Dice_Emerald_10
       rect:
         serializedVersion: 2
-        x: 729
-        y: 382
-        width: 72
-        height: 72
+        x: 452
+        y: 229
+        width: 122
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -395,20 +386,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 118f6e11171356870800000000000000
-      internalID: 8675394618900543505
+      spriteID: fd3eaad0a04978910800000000000000
+      internalID: 1839601743704024031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_11
+      name: T_Dice_Emerald_11
       rect:
         serializedVersion: 2
-        x: 911
-        y: 382
-        width: 72
-        height: 72
+        x: 717
+        y: 113
+        width: 85
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,20 +408,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc337a06f54383160800000000000000
-      internalID: 7005406804622914509
+      spriteID: 7c5545e9adf00e680800000000000000
+      internalID: -8727958646210406969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_12
+      name: T_Dice_Emerald_12
       rect:
         serializedVersion: 2
-        x: 567
-        y: 232
-        width: 72
-        height: 72
+        x: 815
+        y: 113
+        width: 85
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,20 +430,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 878b1369ee9f88300800000000000000
-      internalID: 254728182063806584
+      spriteID: e3e6faf0d2d7b56d0800000000000000
+      internalID: -3000667094222148034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_13
+      name: T_Dice_Emerald_13
       rect:
         serializedVersion: 2
-        x: 729
-        y: 226
-        width: 72
-        height: 72
+        x: 914
+        y: 113
+        width: 85
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -461,20 +452,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 689d487d12b1c4e20800000000000000
-      internalID: 3336071256138373510
+      spriteID: 47d7450eef63cb4c0800000000000000
+      internalID: -4270477878340846220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_14
+      name: T_Dice_Emerald_14
       rect:
         serializedVersion: 2
-        x: 911
-        y: 226
-        width: 72
-        height: 72
+        x: 110
+        y: 101
+        width: 122
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -483,42 +474,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6270f8de95d0b14f0800000000000000
-      internalID: -857076624195123418
+      spriteID: 4cf3cee308d908320800000000000000
+      internalID: 2558217762483486660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_15
+      name: T_Dice_Emerald_15
       rect:
         serializedVersion: 2
-        x: 138
-        y: 137
-        width: 72
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 94b681a6edc449300800000000000000
-      internalID: 257915596813396809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dice_02_16
-      rect:
-        serializedVersion: 2
-        x: 729
+        x: 452
         y: 131
-        width: 72
-        height: 72
+        width: 122
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -527,20 +496,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f0f4cca0b8a139b0800000000000000
-      internalID: -5102111426067762953
+      spriteID: d4c059ba58181e5b0800000000000000
+      internalID: -5340845271975392179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_17
+      name: T_Dice_Emerald_16
       rect:
         serializedVersion: 2
-        x: 911
-        y: 131
-        width: 72
-        height: 72
+        x: 110
+        y: 61
+        width: 122
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -549,20 +518,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 402da92b42ea92580800000000000000
-      internalID: -8851352119981452796
+      spriteID: 88750b2bbd5455ed0800000000000000
+      internalID: -2425956014371088504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice_02_18
+      name: T_Dice_Emerald_17
       rect:
         serializedVersion: 2
-        x: 390
-        y: 41
-        width: 72
-        height: 72
+        x: 452
+        y: 33
+        width: 122
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -571,52 +540,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d86c8b0331ab8f6b0800000000000000
-      internalID: -5262251572997863795
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dice_02_19
-      rect:
-        serializedVersion: 2
-        x: 729
-        y: 35
-        width: 72
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 60fdd3a68e82d2270800000000000000
-      internalID: 8227277072955727622
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dice_02_20
-      rect:
-        serializedVersion: 2
-        x: 911
-        y: 35
-        width: 72
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8b89e4b74fa02cb90800000000000000
-      internalID: -7223198807191807816
+      spriteID: c51aa47f20840bc70800000000000000
+      internalID: 8984760434180137308
       vertices: []
       indices: 
       edges: []
@@ -635,27 +560,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dice_02_0: 5351209019864228482
-      Dice_02_1: 4781741545816492518
-      Dice_02_10: 8675394618900543505
-      Dice_02_11: 7005406804622914509
-      Dice_02_12: 254728182063806584
-      Dice_02_13: 3336071256138373510
-      Dice_02_14: -857076624195123418
-      Dice_02_15: 257915596813396809
-      Dice_02_16: -5102111426067762953
-      Dice_02_17: -8851352119981452796
-      Dice_02_18: -5262251572997863795
-      Dice_02_19: 8227277072955727622
-      Dice_02_2: 8083939230856104398
-      Dice_02_20: -7223198807191807816
-      Dice_02_3: 168305139482896181
-      Dice_02_4: -8195714758673356221
-      Dice_02_5: 6219173136071056954
-      Dice_02_6: -4848057428306329618
-      Dice_02_7: 8674009804183840573
-      Dice_02_8: 1912496601243642591
-      Dice_02_9: 7820975546033000167
+      T_Dice_Emerald_0: -2051516395378244729
+      T_Dice_Emerald_1: 4991547129918591859
+      T_Dice_Emerald_10: 1839601743704024031
+      T_Dice_Emerald_11: -8727958646210406969
+      T_Dice_Emerald_12: -3000667094222148034
+      T_Dice_Emerald_13: -4270477878340846220
+      T_Dice_Emerald_14: 2558217762483486660
+      T_Dice_Emerald_15: -5340845271975392179
+      T_Dice_Emerald_16: -2425956014371088504
+      T_Dice_Emerald_17: 8984760434180137308
+      T_Dice_Emerald_2: -5253253343233065149
+      T_Dice_Emerald_3: -4650935912597262821
+      T_Dice_Emerald_4: -4823643995833909941
+      T_Dice_Emerald_5: 8671324077794666232
+      T_Dice_Emerald_6: -4002868703526451889
+      T_Dice_Emerald_7: -2439087052892577946
+      T_Dice_Emerald_8: 7881637236926432168
+      T_Dice_Emerald_9: -3691541279989893632
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

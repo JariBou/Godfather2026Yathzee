@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ad58d517ffe362042a6ded0fc0fec5f1
+guid: d9ddd80140ecb3741a59e3ef66ce59c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1113775361974024375
-    second: Dice_DefaultMaterial_BaseMap_0
+      213: 4991826967171279793
+    second: Dice_M_Bronze_Dice_BaseMap_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -54,7 +54,7 @@ TextureImporter:
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 1
+  alphaUsage: 0
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dice_DefaultMaterial_BaseMap_0
+      name: Dice_M_Bronze_Dice_BaseMap_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2048
-        height: 2048
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 947c4f595331b80f0800000000000000
-      internalID: -1113775361974024375
+      spriteID: 1bba576cd28864540800000000000000
+      internalID: 4991826967171279793
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dice_DefaultMaterial_BaseMap_0: -1113775361974024375
+      Dice_M_Bronze_Dice_BaseMap_0: 4991826967171279793
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
