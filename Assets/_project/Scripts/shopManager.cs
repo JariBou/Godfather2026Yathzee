@@ -1,3 +1,4 @@
+using _project.Scripts;
 using _project.Scripts.Die;
 using AYellowpaper.SerializedCollections;
 using NUnit.Framework;
@@ -17,6 +18,13 @@ public class shopManager : MonoBehaviour
     public SerializedDictionary<DiceBase, int> dicePool = new SerializedDictionary<DiceBase, int>();
     [HideInInspector]public List<DiceBase> _dicePool = new List<DiceBase>();
     [HideInInspector] public List<DiceBase> shopDicePool = new List<DiceBase>();
+
+    private int _shopIndex = -1;
+    private int _invIndex = -1;
+
+
+
+    private inventoryBehaviour inv = FindAnyObjectByType<inventoryBehaviour>();
     void Start()
     {
         
@@ -87,6 +95,38 @@ public class shopManager : MonoBehaviour
             dicePool[shopDicePool[i]] = dicePool[shopDicePool[i]] + 1;
         }
 
+    }
+
+    public void takeDice(int shopIndex, int invIndex)
+    {
+        (shopDicePool[shopIndex], inv.DiceInventory[invIndex]) = (inv.DiceInventory[invIndex], shopDicePool[shopIndex]);
+        
+    }
+
+    public void takeItem(int shopIndex, int invIndex)
+    {
+        (shopItemPool[shopIndex], inv.ObjectsInventory[invIndex]) = (inv.ObjectsInventory[invIndex], shopItemPool[shopIndex]);
+    }
+
+    public void choose(int index, bool isShop)
+    {
+        if (isShop) _shopIndex = index;
+        else _invIndex = index;
+
+        if (_shopIndex!= -1 && _invIndex != -1)
+        {
+            if (FindAnyObjectByType<GameManager>().state == state.ShopDice)
+            {
+                takeDice(_shopIndex, _invIndex);
+            }
+            else if (FindAnyObjectByType<GameManager>().state== state.ShopObject)
+            {
+                takeItem(_shopIndex, _invIndex);
+            }
+
+
+            (_shopIndex, _invIndex) = (-1, -1);
+        }
     }
 
 }
