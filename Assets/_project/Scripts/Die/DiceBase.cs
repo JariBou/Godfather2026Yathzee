@@ -14,7 +14,7 @@ namespace _project.Scripts.Die
         [FormerlySerializedAs("_diceData"),SerializeField, InfoBox("0, 1, 2, 3, 4, 5 => down, back, right, up, left, front ")] protected DiceDataScriptableObject diceData;
         [FormerlySerializedAs("_facesValues"),SerializeField] protected List<int> facesValues = new(6) { 1, 2, 3, 4, 5, 6 };
         [FormerlySerializedAs("_faceIdMap"),SerializeField] protected SerializedDictionary<GameObject, int> faceIdMap = new();
-
+        
         private void Reset()
         {
             foreach (Transform t in transform)

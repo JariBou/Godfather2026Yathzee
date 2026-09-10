@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f01a0b7929134bb6a110ab6653375c5a, type: 3}
-  m_Name: RegDice
+  m_Name: CursedDice
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.DiceDataScriptableObject
   _name: 
   _icon: {fileID: 0}
-  _prefab: {fileID: -2818284881230932013, guid: 1727486123c85e3468a65d75db44e943, type: 3}
+  _prefab: {fileID: 6276218925798181282, guid: 5594add8018b79e4285e238ee8485a67, type: 3}

@@ -151,7 +151,7 @@ MonoBehaviour:
   _scoreData: {fileID: 0}
   _diceLauncher: {fileID: 743505230}
   _inventory:
-  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
+  - {fileID: 11400000, guid: 518c91ead4667a74d8634e9a7b8c323d, type: 2}
   - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
   - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
   - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}

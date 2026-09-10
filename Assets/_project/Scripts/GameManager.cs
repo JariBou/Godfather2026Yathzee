@@ -37,7 +37,7 @@ namespace _project.Scripts
 
             List<DiceBase> activeDices = await _diceLauncher.LaunchDiceAndWaitForStop(prefabs);
             
-            _gameState = new GameState(_diceLauncher, _scoreData, activeDices);
+            _gameState = new GameState(_diceLauncher, _scoreData, _inventory, activeDices);
 
             _gameState.GameStateResolved += GameStateOnGameStateResolved;
             _ = _gameState.Resolve();
