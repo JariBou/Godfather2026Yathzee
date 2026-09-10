@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Classic Die
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.DiceDataScriptableObject
   _name: 
-  _icon: {fileID: 0}
+  _description: 
+  _icon: {fileID: 21300000, guid: dcc8d8e95a01fbb4891f167d31c8442e, type: 3}
   _prefab: {fileID: -2818284881230932013, guid: 1727486123c85e3468a65d75db44e943, type: 3}

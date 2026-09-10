@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Die 42 Trophy
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.DiceDataScriptableObject
   _name: 
-  _icon: {fileID: 0}
+  _description: 
+  _icon: {fileID: 21300000, guid: 09e229116c263694b963818ab8c6ade6, type: 3}
   _prefab: {fileID: 3111463185057125695, guid: 399961cf75446a5428dcc095d13d1d49, type: 3}

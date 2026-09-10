@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Healer Die
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.DiceDataScriptableObject
   _name: 
-  _icon: {fileID: 0}
+  _description: 
+  _icon: {fileID: 21300000, guid: 2b8c68ea7bf364743938bd09fc9a20d0, type: 3}
   _prefab: {fileID: -5794385862819123820, guid: f9a8bbfbe4c3b4143b1cd9127cb3c378, type: 3}
