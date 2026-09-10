@@ -134,8 +134,8 @@ namespace _project.Scripts
 
         private void GameStateOnGameStateResolved(GameState gameState)
         {
-            _speedUpIfTimeExceededTask?.Cancel();
             _speedUpActivated = false;
+            _speedUpIfTimeExceededTask?.Cancel();
             Debug.Log($"GameManager::GameStateOnGameStateResolved: setting time to 1");
             Time.timeScale = 1;
             
