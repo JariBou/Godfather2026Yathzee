@@ -14,5 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Effects.QuestionDieRelicLingeringEffect
   priority: 3
   _relicDatas:
-    _serializedList: []
+    _serializedList:
+    - Key: {fileID: 11400000, guid: 799c10a85cb5ae943b3923eae4e4ddfa, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 93f58204aa9515747ae3fe65926b2af3, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 3ccb05f703b959f428a7df291706f8ec, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 7838239df9efe4748a34e9d8c50297d3, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: d3e9f82bd1d863e42ae89b76084d837f, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 0168da17bec47144297f272ce32178a6, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: d7d30db6cdcc78f4aadd37a7345ef1b7, type: 2}
+      Value: 1
   _fizzleIfNoRelics: 1
