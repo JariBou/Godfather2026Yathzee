@@ -8,6 +8,7 @@ using _project.Scripts.ScriptableObjects.Relics;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public enum State
 {
@@ -62,7 +63,7 @@ namespace _project.Scripts
             ChangeState(State.Playing);
         }
 
-        private void Start()
+        void Start()
         {
             // _ = DoRoundAsync();
         }
@@ -99,5 +100,7 @@ namespace _project.Scripts
             Debug.Log($"Game state was resolved (score: {obj.CurrentRoundScore})");
             GameStateResolved?.Invoke();
         }
+
+
     }
 }

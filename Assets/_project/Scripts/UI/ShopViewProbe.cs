@@ -41,5 +41,27 @@ namespace _project.Scripts.UI
         {
             Debug.Log($"[{_label}] Terminer", this);
         }
+
+        [ContextMenu("Tester les visuels")]
+        private void TestVisuals()
+        {
+            if (!Application.isPlaying || _shop == null)
+                return;
+
+            _shop.SetOffer(0, null, Color.magenta);
+            _shop.SetInventoryItem(0, null, Color.red, "1");
+            _shop.SetInventoryItem(1, null, Color.green, "2");
+            _shop.SetInventoryItem(2, null, Color.blue, "3");
+        }
+
+        [ContextMenu("Masquer la premiere offre et vider la premiere case")]
+        private void TestClear()
+        {
+            if (!Application.isPlaying || _shop == null)
+                return;
+
+            _shop.ClearOffer(0);
+            _shop.ClearInventoryItem(0);
+        }
     }
 }
