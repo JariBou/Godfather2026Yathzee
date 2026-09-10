@@ -1,5 +1,3 @@
-using System.Linq;
-using UnityEditor.Search;
 using UnityEngine;
 
 public class finalScore : MonoBehaviour
