@@ -6,10 +6,13 @@ using _project.Scripts.ScriptableObjects;
 using NaughtyAttributes;
 using UnityEngine;
 
+public enum state {Menu, Playing, ShopDice, ShopObject, GameOver};
+
 namespace _project.Scripts
 {
     public class GameManager : MonoBehaviour
     {
+        [HideInInspector] public state state;
         [SerializeField] private ScoreDataScriptableObject _scoreData;
         [SerializeField] private DiceLauncher _diceLauncher;
         private GameState _gameState;
