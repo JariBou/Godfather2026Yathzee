@@ -83,6 +83,7 @@ namespace _project.Scripts
         public void TakeDice(int shopIndex, int invIndex)
         {
             (_shopDicePool[shopIndex], _gameManager.Inventory[invIndex]) = (_gameManager.Inventory[invIndex], _shopDicePool[shopIndex]);
+            
             Debug.Log("Dés" + shopIndex + invIndex);
 
         }

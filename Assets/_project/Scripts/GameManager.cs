@@ -6,6 +6,7 @@ using _project.Scripts.ScriptableObjects;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public enum State
 {
@@ -29,6 +30,11 @@ namespace _project.Scripts
         [HideInInspector] public List<DiceDataScriptableObject> Inventory { get { return _inventory; } set { _inventory = value; } }
         [SerializeField] private List<RelicScriptableObjectBase> _relics;
         [HideInInspector] public List<RelicScriptableObjectBase> Relics { get { return _relics; } set { _relics = value; } }
+
+        public GameObject[] diceInvShop;
+        public GameObject[] diceInvGame;
+        public GameObject[] relicInvShop;
+        public GameObject[] relicInvGame;
 
         public UnityEvent GameStateResolved;
 
@@ -60,8 +66,12 @@ namespace _project.Scripts
             ChangeState(State.Playing);
         }
 
-        private void Start()
+        void Start()
         {
+            for (int i = 0; i < 5; i++)
+            {
+                refreshDiceVisual(i);
+            }
             // _ = DoRoundAsync();
         }
 
@@ -96,6 +106,18 @@ namespace _project.Scripts
         {
             Debug.Log($"Game state was resolved (score: {obj.CurrentRoundScore})");
             GameStateResolved?.Invoke();
+        }
+
+
+        public void refreshDiceVisual(int index)
+        {
+            diceInvGame[index].GetComponent<Image>().sprite = _inventory[index].Icon;
+            diceInvShop[index].GetComponent<Image>().sprite = _inventory[index].Icon;
+        }
+        public void refreshRelicVisual(int index)
+        {
+      //      relicInvGame[index].GetComponent<Image>().sprite = _relics[index].Icon;
+     //       relicInvShop[index].GetComponent<Image>().sprite = _relics[index].Icon;
         }
     }
 }

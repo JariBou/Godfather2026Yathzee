@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Die 42
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.DiceDataScriptableObject
   _name: 
-  _icon: {fileID: 0}
+  _icon: {fileID: 4022119014479085006, guid: 109d177dd02362c46a5c1e7cd3904310, type: 3}
   _prefab: {fileID: 3111463185057125695, guid: 6156bcb4742ecea4c942fe33ebbf7204, type: 3}

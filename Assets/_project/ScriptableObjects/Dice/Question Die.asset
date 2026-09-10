@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Question Die
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.DiceDataScriptableObject
   _name: 
-  _icon: {fileID: 0}
+  _icon: {fileID: 4022119014479085006, guid: 109d177dd02362c46a5c1e7cd3904310, type: 3}
   _prefab: {fileID: 8738725631982925946, guid: 03ec99426748de7498473a325cf68c3d, type: 3}
