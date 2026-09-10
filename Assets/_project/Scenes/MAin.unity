@@ -419,6 +419,7 @@ MonoBehaviour:
   _proposedRelicCount: 1
   _gameManager: {fileID: 464049917}
   _diceShopView: {fileID: 2145595834}
+  _passiveShopView: {fileID: 1242600998}
 --- !u!1 &941563898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7254401220413177652, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}

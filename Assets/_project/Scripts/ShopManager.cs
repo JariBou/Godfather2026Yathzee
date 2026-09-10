@@ -25,6 +25,7 @@ namespace _project.Scripts
         [SerializeField] private GameManager _gameManager;
 
         [SerializeField] private ShopView _diceShopView;
+        [SerializeField] private ShopView _passiveShopView;
 
         private int _shopIndex = -1;
         private int _invIndex = -1;
@@ -67,6 +68,7 @@ namespace _project.Scripts
             }
 
             RefreshDiceVisuals();
+            RefreshPassiveVisuals();
         }
 
         private void RefreshDiceVisuals()
@@ -84,6 +86,35 @@ namespace _project.Scripts
             {
                 _diceShopView.SetInventoryItem(
                     i, _gameManager.Inventory[i].Icon, Color.white, "");
+            }
+        }
+
+        private void RefreshPassiveVisuals()
+        {
+            if (_passiveShopView == null || _gameManager == null)
+                return;
+
+            for (int i = 0; i < _shopItemPool.Count; i++)
+            {
+                var relic = _shopItemPool[i];
+
+                if (relic != null)
+                    _passiveShopView.SetOffer(i, relic.Icon, Color.white, "");
+                else
+                    _passiveShopView.ClearOffer(i);
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                var relic = i < _gameManager.Relics.Count
+                    ? _gameManager.Relics[i]
+                    : null;
+
+                if (relic != null)
+                    _passiveShopView.SetInventoryItem(
+                        i, relic.Icon, Color.white, "");
+                else
+                    _passiveShopView.ClearInventoryItem(i);
             }
         }
 
