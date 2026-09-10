@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using _project.Scripts;
 using _project.Scripts.Die;
+using _project.Scripts.ScriptableObjects.Relics;
 
 public class inventoryBehaviour : MonoBehaviour
 {

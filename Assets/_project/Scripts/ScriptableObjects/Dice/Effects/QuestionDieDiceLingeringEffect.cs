@@ -14,10 +14,13 @@ namespace _project.Scripts.ScriptableObjects.Dice.Effects
     #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             int randIndex = Random.Range(0, gamestate.Inventory.Count);
+            DiceDataScriptableObject targetDice = gamestate.Inventory[randIndex];
 
             List<DiceDataScriptableObject> inter = new();
             foreach ((DiceDataScriptableObject key, int value) in _diceDatas)
             {
+                if (key == targetDice) continue;
+                
                 for (int i = 0; i < value; i++)
                 {
                     inter.Add(key);
@@ -25,7 +28,7 @@ namespace _project.Scripts.ScriptableObjects.Dice.Effects
             }
             
             if (inter.Count == 0) return;
-            
+
             gamestate.Inventory[randIndex] = inter[Random.Range(0, inter.Count)];
         }
     }

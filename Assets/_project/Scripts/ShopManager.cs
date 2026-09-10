@@ -3,6 +3,8 @@ using _project.Scripts.ScriptableObjects;
 using AYellowpaper.SerializedCollections;
 using System.Collections.Generic;
 using System.Linq;
+using _project.Scripts.ScriptableObjects.Dice;
+using _project.Scripts.ScriptableObjects.Relics;
 using UnityEngine;
 using UnityEngine.Serialization;
 

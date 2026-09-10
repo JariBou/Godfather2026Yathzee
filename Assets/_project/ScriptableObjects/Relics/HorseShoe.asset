@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d897e879ab9641a3a5ad512f239efdd1, type: 3}
   m_Name: HorseShoe
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Relics.RandomOutcomeRelic
+  _name: 
+  _icon: {fileID: 21300000, guid: 629ed4f9748211340ae43c80b9f3e359, type: 3}
+  _description: 
   _effect: {fileID: 11400000, guid: 86c48968db21da8469f9b6a743d835c0, type: 2}

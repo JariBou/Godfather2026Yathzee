@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c926c3a595b41509d428338d502f6e6, type: 3}
   m_Name: FortuneCookieEffect
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Relics.Effects.RandomEffectsEffect
-  priority: 0
+  priority: 3
   _possibleOutcomes:
     _serializedList:
     - Key: Grande Richesse

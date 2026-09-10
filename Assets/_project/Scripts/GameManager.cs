@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using _project.Scripts.Die;
 using _project.Scripts.DieLaunching;
 using _project.Scripts.ScriptableObjects;
+using _project.Scripts.ScriptableObjects.Dice;
+using _project.Scripts.ScriptableObjects.Relics;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
@@ -116,8 +118,8 @@ namespace _project.Scripts
         }
         public void refreshRelicVisual(int index)
         {
-      //      relicInvGame[index].GetComponent<Image>().sprite = _relics[index].Icon;
-     //       relicInvShop[index].GetComponent<Image>().sprite = _relics[index].Icon;
+            relicInvGame[index].GetComponent<Image>().sprite = _relics[index].Icon;
+           relicInvShop[index].GetComponent<Image>().sprite = _relics[index].Icon;
         }
     }
 }

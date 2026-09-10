@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using _project.Scripts.ScriptableObjects;
+using _project.Scripts.ScriptableObjects.Dice;
 using AYellowpaper.SerializedCollections;
 using NaughtyAttributes;
 using UnityEngine;
