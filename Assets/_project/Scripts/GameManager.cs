@@ -98,7 +98,7 @@ namespace _project.Scripts
         private void GameStateOnGameStateResolved(GameState obj)
         {
             Debug.Log($"Game state was resolved (score: {obj.CurrentRoundScore})");
-            GameStateResolved?.Invoke();
+            // GameStateResolved?.Invoke();
         }
 
 

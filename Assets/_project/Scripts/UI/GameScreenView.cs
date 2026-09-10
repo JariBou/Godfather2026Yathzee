@@ -2,6 +2,8 @@ using System;
 using System.Globalization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _project.Scripts.UI
@@ -15,7 +17,7 @@ namespace _project.Scripts.UI
         [Header("Actions")]
         [SerializeField] private Button _rollButton;
 
-        [Header("Visuels des dés")]
+        [Header("Visuels des dï¿½s")]
         [SerializeField] private ItemVisualView[] _inventoryDice = new ItemVisualView[5];
 
         [SerializeField] private ItemVisualView _rollingDie;
@@ -25,6 +27,10 @@ namespace _project.Scripts.UI
         [Header("Visuels des passifs")]
         [SerializeField] private ItemVisualView[] _inventoryPassives = new ItemVisualView[3];
 
+        [SerializeField] private GameObject _background;
+        public UnityEvent gameReset;
+        public UnityEvent rollRequestedUnity;
+        
         public event Action RollRequested;
 
         private static readonly CultureInfo DisplayCulture = CultureInfo.GetCultureInfo("fr-FR");
@@ -33,12 +39,17 @@ namespace _project.Scripts.UI
         {
             if (_rollButton != null)
                 _rollButton.onClick.AddListener(HandleRollClicked);
+            
+            _background.SetActive(false);
+            gameReset?.Invoke();
         }
 
         private void OnDisable()
         {
             if (_rollButton != null)
                 _rollButton.onClick.RemoveListener(HandleRollClicked);
+            
+            _background.SetActive(true);
         }
 
         public void SetScore(double score, double quota)
@@ -62,6 +73,7 @@ namespace _project.Scripts.UI
         private void HandleRollClicked()
         {
             RollRequested?.Invoke();
+            rollRequestedUnity?.Invoke();
         }
 
         public void SetInventoryDie(

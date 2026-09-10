@@ -9,7 +9,9 @@ namespace _project.Scripts.Die
         public override async Awaitable ApplyEffect(GameState gamestate)
     #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
-            gamestate.AddScore(GetUpFaceValue());
+            int upFaceValue = GetUpFaceValue();
+            gamestate.AddScore(upFaceValue);
+            SpawnScoreEffect(upFaceValue);
         }
     }
 }

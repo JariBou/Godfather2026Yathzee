@@ -723,7 +723,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 0a58c762e3d17b448adf8de034bcab16, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 8231815872481206689, guid: fad6404454db28445a1853c79bfcab80, type: 3}
+      objectReference: {fileID: 2100000, guid: edb00e3301f522740ac6e609a239cb28, type: 2}
     - target: {fileID: -5754084199372789682, guid: 0a58c762e3d17b448adf8de034bcab16, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -861,6 +861,7 @@ MonoBehaviour:
       Value: 2
     - Key: {fileID: 159346355484797554}
       Value: 4
+  scoreEffectScript: {fileID: -8313792042258631889, guid: d70d00766ffc7634cb82496ea292c377, type: 3}
 --- !u!4 &7538356448069179604 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0a58c762e3d17b448adf8de034bcab16, type: 3}

@@ -41,25 +41,25 @@ namespace _project.Scripts
         public void AddScore(int value)
         {
             CurrentRoundScore += value;
-            ScoreUpdated.Invoke(CurrentRoundScore, TargetRoundScore);
+            ScoreUpdated?.Invoke(CurrentRoundScore, TargetRoundScore);
         }
 
         public void MultiplyScore(float value)
         {
             CurrentRoundScore = Mathf.CeilToInt(CurrentRoundScore * value);
-            ScoreUpdated.Invoke(CurrentRoundScore, TargetRoundScore);
+            ScoreUpdated?.Invoke(CurrentRoundScore, TargetRoundScore);
         }
 
         public void SetScore(int value)
         {
             CurrentRoundScore = value;
-            ScoreUpdated.Invoke(CurrentRoundScore, TargetRoundScore);
+            ScoreUpdated?.Invoke(CurrentRoundScore, TargetRoundScore);
         }
         
         public void SetScore(float value)
         {
             CurrentRoundScore = Mathf.CeilToInt(value);
-            ScoreUpdated.Invoke(CurrentRoundScore, TargetRoundScore);
+            ScoreUpdated?.Invoke(CurrentRoundScore, TargetRoundScore);
         }
 
         public void AddEffect(EffectBase effect)

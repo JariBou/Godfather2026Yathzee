@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using _project.Scripts.Effects;
 using _project.Scripts.ScriptableObjects;
 using _project.Scripts.ScriptableObjects.Dice;
 using AYellowpaper.SerializedCollections;
@@ -15,6 +16,7 @@ namespace _project.Scripts.Die
         [FormerlySerializedAs("_diceData"),SerializeField, InfoBox("0, 1, 2, 3, 4, 5 => down, back, right, up, left, front ")] protected DiceDataScriptableObject diceData;
         [FormerlySerializedAs("_facesValues"),SerializeField] protected List<int> facesValues = new(6) { 1, 2, 3, 4, 5, 6 };
         [FormerlySerializedAs("_faceIdMap"),SerializeField] protected SerializedDictionary<GameObject, int> faceIdMap = new();
+        [SerializeField] protected ScoreEffectScript scoreEffectScript;
         
         private void Reset()
         {
@@ -64,6 +66,12 @@ namespace _project.Scripts.Die
             }
         
             return facesValues[faceIndex];
+        }
+
+        protected void SpawnScoreEffect(int score)
+        {
+            ScoreEffectScript effectScript = Instantiate(scoreEffectScript, transform.position + Vector3.up, Quaternion.identity);
+            effectScript.Setup(score);
         }
 
         public abstract Awaitable ApplyEffect(GameState gamestate);

@@ -17,6 +17,7 @@ namespace _project.Scripts.Die
             {
                 gamestate.AddEffect(effect);
             }
+            SpawnScoreEffect(upFaceValue);
         }
     }
 }
