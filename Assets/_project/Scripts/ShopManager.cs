@@ -167,6 +167,8 @@ namespace _project.Scripts
             }
             
             (_shopItemPool[shopIndex], _gameManager.Relics[invIndex]) = (_gameManager.Relics[invIndex], _shopItemPool[shopIndex]);
+
+            RefreshPassiveVisuals();
         }
 
         public void ChooseShop(int index)

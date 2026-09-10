@@ -47,6 +47,7 @@ namespace _project.Scripts.UI
             SetScore(0, _gameManager.ScoreData.GetTargetScoreForStageInt(_gameManager.CurrentStage));
             _background.SetActive(false);
             gameReset?.Invoke();
+            RefreshInventoryVisuals();
         }
 
         private void OnDisable()
@@ -132,6 +133,36 @@ namespace _project.Scripts.UI
         public void ClearInventoryPassive(int index)
         {
             _inventoryPassives[index].Clear();
+        }
+
+        public void RefreshInventoryVisuals()
+        {
+            if (_gameManager == null)
+                return;
+
+            for (int i = 0; i < _inventoryDice.Length; i++)
+            {
+                var dice = i < _gameManager.Inventory.Count
+                    ? _gameManager.Inventory[i]
+                    : null;
+
+                if (dice != null)
+                    SetInventoryDie(i, dice.Icon, Color.white, "");
+                else
+                    ClearInventoryDie(i);
+            }
+
+            for (int i = 0; i < _inventoryPassives.Length; i++)
+            {
+                var relic = i < _gameManager.Relics.Count
+                    ? _gameManager.Relics[i]
+                    : null;
+
+                if (relic != null)
+                    SetInventoryPassive(i, relic.Icon, Color.white);
+                else
+                    ClearInventoryPassive(i);
+            }
         }
     }
 }
