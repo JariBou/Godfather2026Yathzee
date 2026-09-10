@@ -182,10 +182,49 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  GameStateResolved:
+  RoundWon:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 9082327975488898665}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6902060422091730362}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  RoundLost:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1929608120}
+        m_TargetAssemblyTypeName: _project.Scripts.UI.GameOverView, Assembly-CSharp
+        m_MethodName: OnGameLost
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 867216741}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -334,6 +373,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770713851}
   m_CullTransparentMesh: 1
+--- !u!1 &867216741 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3625616746479865482, guid: a79b9d0843753b547bbd39700e5e42a5, type: 3}
+  m_PrefabInstance: {fileID: 7536806484788307840}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &935672357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7933449938599066802, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
@@ -766,6 +810,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1260779969069204475, guid: a79b9d0843753b547bbd39700e5e42a5, type: 3}
   m_PrefabInstance: {fileID: 7536806484788307840}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1929608120 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2114164930798503660, guid: a79b9d0843753b547bbd39700e5e42a5, type: 3}
+  m_PrefabInstance: {fileID: 7536806484788307840}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867216741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be7d211ae8c85f4c93bb42ecac0a372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.GameOverView
 --- !u!114 &2020255689 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7086505224951616749, guid: 36e2790f51512954b980e4d52714f097, type: 3}
@@ -2019,9 +2074,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2114164930798503660, guid: a79b9d0843753b547bbd39700e5e42a5, type: 3}
+      propertyPath: MenuRequestedUnity.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114164930798503660, guid: a79b9d0843753b547bbd39700e5e42a5, type: 3}
+      propertyPath: MenuRequestedUnity.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114164930798503660, guid: a79b9d0843753b547bbd39700e5e42a5, type: 3}
+      propertyPath: MenuRequestedUnity.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114164930798503660, guid: a79b9d0843753b547bbd39700e5e42a5, type: 3}
+      propertyPath: MenuRequestedUnity.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114164930798503660, guid: a79b9d0843753b547bbd39700e5e42a5, type: 3}
+      propertyPath: MenuRequestedUnity.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2798446744906705378, guid: a79b9d0843753b547bbd39700e5e42a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3625616746479865482, guid: a79b9d0843753b547bbd39700e5e42a5, type: 3}
       propertyPath: m_Name
       value: GameOverScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625616746479865482, guid: a79b9d0843753b547bbd39700e5e42a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -2,6 +2,8 @@ using System;
 using System.Globalization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace _project.Scripts.UI
@@ -13,7 +15,9 @@ namespace _project.Scripts.UI
         [SerializeField] private Button _mainMenuButton;
 
         public event Action RetryRequested;
+        public UnityEvent RetryRequestedUnity;
         public event Action MainMenuRequested;
+        public UnityEvent MenuRequestedUnity;
 
         private static readonly CultureInfo DisplayCulture =
             CultureInfo.GetCultureInfo("fr-FR");
@@ -36,6 +40,11 @@ namespace _project.Scripts.UI
                 _mainMenuButton.onClick.RemoveListener(HandleMainMenuClicked);
         }
 
+        public void OnGameLost(GameState state)
+        {
+            SetSummary(state.CurrentStage, state.CurrentRoundScore, state.TargetRoundScore);
+        }
+
         public void SetSummary(int turn, double score, double quota)
         {
             string scoreLabel = score.ToString("N0", DisplayCulture);
@@ -50,11 +59,15 @@ namespace _project.Scripts.UI
         private void HandleRetryClicked()
         {
             RetryRequested?.Invoke();
+            RetryRequestedUnity?.Invoke();
         }
 
         private void HandleMainMenuClicked()
         {
             MainMenuRequested?.Invoke();
+            MenuRequestedUnity?.Invoke();
+            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

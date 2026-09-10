@@ -7,6 +7,8 @@ using _project.Scripts.ScriptableObjects.Relics;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public enum State
 {
@@ -32,7 +34,8 @@ namespace _project.Scripts
         [SerializeField] private List<RelicScriptableObjectBase> _relics;
         public List<RelicScriptableObjectBase> Relics { get { return _relics; } set { _relics = value; } }
 
-        public UnityEvent GameStateResolved;
+        [FormerlySerializedAs("GameStateResolved")] public UnityEvent RoundWon;
+        public UnityEvent<GameState> RoundLost;
         public UnityEvent<int, int> ScoreUpdated;
         // private Awaitable _speedUpIfTimeExceededTask;
         // private CancellationTokenSource _speedUpIfTimeExceededCancellationTokenSource = new();
@@ -164,12 +167,18 @@ namespace _project.Scripts
 
         private void OnGameOver(GameState gameState)
         {
+            RoundLost?.Invoke(gameState);
+        }
+
+        public void StartRun()
+        {
+            CurrentStage = -1;
         }
 
         private async Awaitable DelayedGameStateResolved(float delayTime)
         {
             await Awaitable.WaitForSecondsAsync(delayTime);
-            GameStateResolved?.Invoke();
+            RoundWon?.Invoke();
         }
 
 
