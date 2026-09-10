@@ -41,11 +41,18 @@ namespace _project.Scripts.UI
 
             if (_finishButton != null)
                 _finishButton.onClick.AddListener(HandleFinishClicked);
-            if (this.gameObject.name =="DiceShopScreen")
-                FindAnyObjectByType<GameManager>().ChangeStateToDiceShop();
-            else
-                FindAnyObjectByType<GameManager>().ChangeStateToRelicShop();
-            FindAnyObjectByType<ShopManager>().RefreshShop();
+            var gameManager = FindAnyObjectByType<GameManager>();
+            var shopManager = FindAnyObjectByType<ShopManager>();
+
+            if (gameManager != null && shopManager != null)
+            {
+                if (gameObject.name == "DiceShopScreen")
+                    gameManager.ChangeStateToDiceShop();
+                else
+                    gameManager.ChangeStateToRelicShop();
+
+                shopManager.RefreshShop();
+            }
         }
 
         private void OnDisable()
