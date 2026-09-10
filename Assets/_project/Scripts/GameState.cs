@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using _project.Scripts.Die;
 using _project.Scripts.DieLaunching;
 using _project.Scripts.ScriptableObjects;
@@ -67,7 +68,7 @@ namespace _project.Scripts
 
         public async Awaitable Resolve()
         {
-            foreach (RelicScriptableObjectBase relic in Relics)
+            foreach (RelicScriptableObjectBase relic in Relics.Where(relic => relic != null))
             {
                 relic.ApplyEffect(this);
             }
