@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Emerald Die
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.DiceDataScriptableObject
   _name: 
-  _icon: {fileID: 4022119014479085006, guid: 109d177dd02362c46a5c1e7cd3904310, type: 3}
+  _description: 
+  _icon: {fileID: 21300000, guid: cb4628e0064e0fe4aaa49c1a758e1916, type: 3}
   _prefab: {fileID: -2818284881230932013, guid: 616ec2c4e4cbdc54fa3c15a3660368f3, type: 3}

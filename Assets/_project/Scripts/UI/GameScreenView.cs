@@ -24,6 +24,13 @@ namespace _project.Scripts.UI
 
         public event Action RollRequested;
 
+        public GameManager gm;
+
+
+        public GameObject[] diceInvGame;
+        public GameObject[] relicInvGame;
+
+
         private static readonly CultureInfo DisplayCulture =
             CultureInfo.GetCultureInfo("fr-FR");
 
@@ -34,6 +41,11 @@ namespace _project.Scripts.UI
             
             _background.SetActive(false);
             gameReset?.Invoke();
+
+            for (int i = 0; i < 5; i++)
+            {
+                refreshDiceVisual(i);
+            }
         }
 
         private void OnDisable()
@@ -42,6 +54,7 @@ namespace _project.Scripts.UI
                 _rollButton.onClick.RemoveListener(HandleRollClicked);
             
             _background.SetActive(true);
+
         }
 
         public void SetScore(float score, float quota)
@@ -66,6 +79,17 @@ namespace _project.Scripts.UI
         {
             RollRequested?.Invoke();
             rollRequestedUnity?.Invoke();
+        }
+
+
+
+        public void refreshDiceVisual(int index)
+        {
+            diceInvGame[index].GetComponent<Image>().sprite = gm.Inventory[index].Icon;
+        }
+        public void refreshRelicVisual(int index)
+        {
+            relicInvGame[index].GetComponent<Image>().sprite = gm.Relics[index].Icon;
         }
     }
 }

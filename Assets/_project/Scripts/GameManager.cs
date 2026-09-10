@@ -33,11 +33,6 @@ namespace _project.Scripts
         [SerializeField] private List<RelicScriptableObjectBase> _relics;
         [HideInInspector] public List<RelicScriptableObjectBase> Relics { get { return _relics; } set { _relics = value; } }
 
-        public GameObject[] diceInvShop;
-        public GameObject[] diceInvGame;
-        public GameObject[] relicInvShop;
-        public GameObject[] relicInvGame;
-
         public UnityEvent GameStateResolved;
 
         public State CurrentState => _state;
@@ -70,10 +65,6 @@ namespace _project.Scripts
 
         void Start()
         {
-            for (int i = 0; i < 5; i++)
-            {
-                refreshDiceVisual(i);
-            }
             // _ = DoRoundAsync();
         }
 
@@ -111,15 +102,5 @@ namespace _project.Scripts
         }
 
 
-        public void refreshDiceVisual(int index)
-        {
-            diceInvGame[index].GetComponent<Image>().sprite = _inventory[index].Icon;
-            diceInvShop[index].GetComponent<Image>().sprite = _inventory[index].Icon;
-        }
-        public void refreshRelicVisual(int index)
-        {
-            relicInvGame[index].GetComponent<Image>().sprite = _relics[index].Icon;
-           relicInvShop[index].GetComponent<Image>().sprite = _relics[index].Icon;
-        }
     }
 }
