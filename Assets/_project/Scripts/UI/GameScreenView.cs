@@ -28,6 +28,7 @@ namespace _project.Scripts.UI
 
 
         [SerializeField] private ItemTooltipTrigger[] _inventoryDiceTooltips = new ItemTooltipTrigger[5];
+        [SerializeField] private ItemTooltipTrigger[] _inventoryPassiveTooltips = new ItemTooltipTrigger[3];
 
         [SerializeField] private GameObject _background;
         [SerializeField] private GameManager _gameManager;
@@ -170,6 +171,12 @@ namespace _project.Scripts.UI
                     SetInventoryPassive(i, relic.Icon, Color.white);
                 else
                     ClearInventoryPassive(i);
+
+                if (i < _inventoryPassiveTooltips.Length &&
+                    _inventoryPassiveTooltips[i] != null)
+                {
+                    _inventoryPassiveTooltips[i].SetData(relic);
+                }
             }
         }
     }

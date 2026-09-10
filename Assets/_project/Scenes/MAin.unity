@@ -119,6 +119,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &19131124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2875668062209074213, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+  m_PrefabInstance: {fileID: 6902060422091730361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &19131128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19131124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccc45f438dc28b4da615fca82f0d17b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemTooltipTrigger
+  _tooltip: {fileID: 1745133596}
+  _dice: {fileID: 0}
+  _relic: {fileID: 0}
 --- !u!114 &121205499 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8785443882636715505, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
@@ -390,6 +410,46 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781844046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccc45f438dc28b4da615fca82f0d17b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemTooltipTrigger
+  _tooltip: {fileID: 1745133596}
+  _dice: {fileID: 0}
+  _relic: {fileID: 0}
+--- !u!1 &815003727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6910080685710214858, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+  m_PrefabInstance: {fileID: 6902060422091730361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &815003731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815003727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccc45f438dc28b4da615fca82f0d17b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemTooltipTrigger
+  _tooltip: {fileID: 1745133596}
+  _dice: {fileID: 0}
+  _relic: {fileID: 0}
+--- !u!1 &841333018 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1259163464929420910, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+  m_PrefabInstance: {fileID: 6902060422091730361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &841333022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841333018}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ccc45f438dc28b4da615fca82f0d17b, type: 3}
@@ -1767,6 +1827,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 781844050}
     - target: {fileID: 2156227986637546726, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+      propertyPath: '_inventoryPassiveTooltips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 841333022}
+    - target: {fileID: 2156227986637546726, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+      propertyPath: '_inventoryPassiveTooltips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 19131128}
+    - target: {fileID: 2156227986637546726, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+      propertyPath: '_inventoryPassiveTooltips.Array.data[2]'
+      value: 
+      objectReference: {fileID: 815003731}
+    - target: {fileID: 2156227986637546726, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
       propertyPath: gameReset.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -2018,9 +2090,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4438738643106991759, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4606632588136502440, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
       propertyPath: _valueText
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701353452480863589, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5064283867814772010, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
       propertyPath: _valueText
@@ -2076,6 +2156,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7721613851818100041, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748918915998250230, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+      propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7848488687516089244, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
@@ -2154,6 +2238,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4011263466493940519, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 781844050}
+    - targetCorrespondingSourceObject: {fileID: 1259163464929420910, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 841333022}
+    - targetCorrespondingSourceObject: {fileID: 2875668062209074213, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 19131128}
+    - targetCorrespondingSourceObject: {fileID: 6910080685710214858, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 815003731}
   m_SourcePrefab: {fileID: 100100000, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
 --- !u!1 &6902060422091730362 stripped
 GameObject:
