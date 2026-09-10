@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace _project.Scripts
 {
@@ -7,7 +8,7 @@ namespace _project.Scripts
         High,
         Medium,
         Low,
-        Lingering,
+        [InspectorName("Lingering (After Score Calc)")]Lingering,
         // ReSharper disable once InconsistentNaming
         [Obsolete]COUNT, // Don't show in inspector
     }

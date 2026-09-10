@@ -151,11 +151,13 @@ MonoBehaviour:
   _scoreData: {fileID: 0}
   _diceLauncher: {fileID: 743505230}
   _inventory:
-  - {fileID: 11400000, guid: 518c91ead4667a74d8634e9a7b8c323d, type: 2}
+  - {fileID: 11400000, guid: 8e6949d85a6214f489a76949e0aae433, type: 2}
+  - {fileID: 11400000, guid: 8e6949d85a6214f489a76949e0aae433, type: 2}
   - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
   - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
   - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
-  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
+  _relics:
+  - {fileID: 11400000, guid: d7d30db6cdcc78f4aadd37a7345ef1b7, type: 2}
 --- !u!4 &353304944
 Transform:
   m_ObjectHideFlags: 0

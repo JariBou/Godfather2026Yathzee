@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c4324f5613407cac31273e0b12416a, type: 3}
   m_Name: CursedDiceLingeringEffect
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Effects.CursedDiceLingeringEffect
-  priority: 0
+  priority: 3
   _diceData: {fileID: 11400000, guid: 518c91ead4667a74d8634e9a7b8c323d, type: 2}

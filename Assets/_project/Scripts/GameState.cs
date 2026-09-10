@@ -12,26 +12,44 @@ namespace _project.Scripts
         public DiceLauncher Launcher { get; private set; }
         public ScoreDataScriptableObject ScoreData { get; private set; }
         public int CurrentRoundScore { get; private set; }
-        public Stack<DiceBase> ActiveDices { get; private set; }
+        public Stack<DiceBase> ActiveDice { get; private set; }
+        public List<DiceBase> InGameDice { get; private set; } = new();
         private Dictionary<EffectPriority, Stack<EffectBase>> Effects { get; set; } = new();
-
         public List<DiceDataScriptableObject> Inventory { get; private set; }
-        
+        public List<RelicScriptableObjectBase> Relics { get; set; }
+
         public event Action<GameState> GameStateResolved;
 
 
         public GameState(DiceLauncher diceLauncher, ScoreDataScriptableObject scoreData, List<DiceDataScriptableObject> inventory,
+                         List<RelicScriptableObjectBase> relics,
                          List<DiceBase> activeDices)
         {
+            Relics = relics;
             Inventory = inventory;
             ScoreData = scoreData;
             Launcher = diceLauncher;
-            ActiveDices = new Stack<DiceBase>(activeDices);
+            ActiveDice = new Stack<DiceBase>(activeDices);
         }
 
         public void AddScore(int value)
         {
             CurrentRoundScore += value;
+        }
+
+        public void MultiplyScore(float value)
+        {
+            CurrentRoundScore = Mathf.CeilToInt(CurrentRoundScore * value);
+        }
+
+        public void SetScore(int value)
+        {
+            CurrentRoundScore = value;
+        }
+        
+        public void SetScore(float value)
+        {
+            CurrentRoundScore = Mathf.CeilToInt(value);
         }
 
         public void AddEffect(EffectBase effect)
@@ -49,9 +67,15 @@ namespace _project.Scripts
 
         public async Awaitable Resolve()
         {
-            while (ActiveDices.Count > 0)
+            foreach (RelicScriptableObjectBase relic in Relics)
             {
-                DiceBase dice = ActiveDices.Pop();
+                relic.ApplyEffect(this);
+            }
+            
+            while (ActiveDice.Count > 0)
+            {
+                DiceBase dice = ActiveDice.Pop();
+                InGameDice.Add(dice);
                 await dice.ApplyEffect(this);
             }
 

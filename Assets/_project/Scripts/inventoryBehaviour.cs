@@ -1,12 +1,13 @@
 using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
+using _project.Scripts;
 using _project.Scripts.Die;
 
 public class inventoryBehaviour : MonoBehaviour
 {
     public List<DiceBase> DiceInventory = new List<DiceBase>();
-    public List<Objects> ObjectsInventory = new List<Objects>();
+    public List<RelicScriptableObjectBase> ObjectsInventory = new List<RelicScriptableObjectBase>();
 
 
     void Start()

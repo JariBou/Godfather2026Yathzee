@@ -15,6 +15,7 @@ namespace _project.Scripts
         private GameState _gameState;
 
         [SerializeField] private List<DiceDataScriptableObject> _inventory;
+        [SerializeField] private List<RelicScriptableObjectBase> _relics;
 
         public void DoRound()
         {
@@ -37,7 +38,7 @@ namespace _project.Scripts
 
             List<DiceBase> activeDices = await _diceLauncher.LaunchDiceAndWaitForStop(prefabs);
             
-            _gameState = new GameState(_diceLauncher, _scoreData, _inventory, activeDices);
+            _gameState = new GameState(_diceLauncher, _scoreData, _inventory, _relics, activeDices);
 
             _gameState.GameStateResolved += GameStateOnGameStateResolved;
             _ = _gameState.Resolve();

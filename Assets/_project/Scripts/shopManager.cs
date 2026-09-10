@@ -3,6 +3,7 @@ using AYellowpaper.SerializedCollections;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
+using _project.Scripts;
 using TMPro;
 using UnityEngine;
 
@@ -10,9 +11,9 @@ using static UnityEditor.Progress;
 
 public class shopManager : MonoBehaviour
 {
-    public SerializedDictionary<Objects, int> itemPool = new SerializedDictionary<Objects, int>();
-    [HideInInspector] public List<Objects> _itemPool = new List<Objects>();
-    [HideInInspector] public List<Objects> shopItemPool = new List<Objects>();
+    public SerializedDictionary<RelicScriptableObjectBase, int> itemPool = new SerializedDictionary<RelicScriptableObjectBase, int>();
+    [HideInInspector] public List<RelicScriptableObjectBase> _itemPool = new List<RelicScriptableObjectBase>();
+    [HideInInspector] public List<RelicScriptableObjectBase> shopItemPool = new List<RelicScriptableObjectBase>();
     [Header("")] 
     public SerializedDictionary<DiceBase, int> dicePool = new SerializedDictionary<DiceBase, int>();
     [HideInInspector]public List<DiceBase> _dicePool = new List<DiceBase>();
@@ -34,7 +35,7 @@ public class shopManager : MonoBehaviour
         shopItemPool.Clear();
         foreach (var pair in itemPool) 
         {
-            Objects _item = pair.Key;
+            RelicScriptableObjectBase _item = pair.Key;
             int quantity = pair.Value;
             for (int i = 0; i < quantity; i++)
             {
@@ -45,7 +46,7 @@ public class shopManager : MonoBehaviour
         for (int i = 0; i < 3; i++)
         { 
             int randomitem = Random.Range(0, _itemPool.Count);
-            Objects __item = _itemPool[randomitem];
+            RelicScriptableObjectBase __item = _itemPool[randomitem];
             itemPool[__item] = itemPool[__item] - 1;
             shopItemPool.Add(__item);
         }

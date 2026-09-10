@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace _project.Scripts.ScriptableObjects.Effects
 {
-    [CreateAssetMenu(fileName = "CursedDiceLingeringEffect", menuName = "Chaos Yahtzee/Cursed Dice Lingering Effect")]
+    [CreateAssetMenu(fileName = "CursedDiceLingeringEffect", menuName = "Chaos Yahtzee/Effects/Cursed Dice Lingering Effect")]
     public class CursedDiceLingeringEffect : EffectBase
     {
         [SerializeField] private DiceDataScriptableObject _diceData;
