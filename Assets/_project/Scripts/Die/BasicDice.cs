@@ -10,8 +10,8 @@ namespace _project.Scripts.Die
     #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             int upFaceValue = GetUpFaceValue();
-            gamestate.AddScore(upFaceValue);
             SpawnScoreEffect(upFaceValue);
+            gamestate.AddScore(upFaceValue);
         }
     }
 }
