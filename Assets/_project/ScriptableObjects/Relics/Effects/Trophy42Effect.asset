@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2e4e996713b2646ae011c3f139203d, type: 3}
   m_Name: Trophy42Effect
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Relics.Effects.Trophy42Effect
-  priority: 0
-  _base42DiceData: {fileID: 0}
-  _superDiceData: {fileID: 0}
+  priority: 3
+  _base42DiceData: {fileID: 11400000, guid: 8e6949d85a6214f489a76949e0aae433, type: 2}
+  _superDiceData: {fileID: 11400000, guid: 80d45a39ab8bd5647bcd0c2d04e8426d, type: 2}

@@ -5,14 +5,22 @@ using _project.Scripts.DieLaunching;
 using _project.Scripts.ScriptableObjects;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Events;
 
-public enum state {Menu, Playing, ShopDice, ShopObject, GameOver};
+public enum State
+{
+    Menu, 
+    Playing, 
+    ShopDice, 
+    ShopObject, 
+    GameOver
+};
 
 namespace _project.Scripts
 {
     public class GameManager : MonoBehaviour
     {
-        [HideInInspector] public state state;
+        [SerializeField, ReadOnly] private State _state;
         [SerializeField] private ScoreDataScriptableObject _scoreData;
         [SerializeField] private DiceLauncher _diceLauncher;
         private GameState _gameState;
@@ -20,12 +28,47 @@ namespace _project.Scripts
         [SerializeField] private List<DiceDataScriptableObject> _inventory;
         [SerializeField] private List<RelicScriptableObjectBase> _relics;
 
-        public void DoRound()
+        public UnityEvent GameStateResolved;
+
+        public State CurrentState => _state;
+        
+        
+        public void ChangeStateToMenu()
         {
-            _diceLauncher.LaunchDice();
+            ChangeState(State.Menu);
+        }
+        
+        public void ChangeStateToGameOver()
+        {
+            ChangeState(State.GameOver);
+        }
+        
+        public void ChangeStateToDiceShop()
+        {
+            ChangeState(State.ShopDice);
+        }
+
+        public void ChangeStateToRelicShop()
+        {
+            ChangeState(State.ShopObject);
+        }
+        
+        public void ChangeStateToPlay()
+        {
+            ChangeState(State.Playing);
         }
 
         private void Start()
+        {
+            // _ = DoRoundAsync();
+        }
+
+        public void ChangeState(State newState)
+        {
+            _state = newState;
+        }
+
+        public void DoRound()
         {
             _ = DoRoundAsync();
         }
@@ -50,6 +93,7 @@ namespace _project.Scripts
         private void GameStateOnGameStateResolved(GameState obj)
         {
             Debug.Log($"Game state was resolved (score: {obj.CurrentRoundScore})");
+            GameStateResolved?.Invoke();
         }
     }
 }

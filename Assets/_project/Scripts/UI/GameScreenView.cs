@@ -2,6 +2,8 @@ using System;
 using System.Globalization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _project.Scripts.UI
@@ -15,6 +17,11 @@ namespace _project.Scripts.UI
         [Header("Actions")]
         [SerializeField] private Button _rollButton;
 
+        [SerializeField] private GameObject _background;
+
+        [FormerlySerializedAs("GameReset")] public UnityEvent gameReset;
+        [FormerlySerializedAs("RollRequestedUnity")] public UnityEvent rollRequestedUnity;
+
         public event Action RollRequested;
 
         private static readonly CultureInfo DisplayCulture =
@@ -24,12 +31,17 @@ namespace _project.Scripts.UI
         {
             if (_rollButton != null)
                 _rollButton.onClick.AddListener(HandleRollClicked);
+            
+            _background.SetActive(false);
+            gameReset?.Invoke();
         }
 
         private void OnDisable()
         {
             if (_rollButton != null)
                 _rollButton.onClick.RemoveListener(HandleRollClicked);
+            
+            _background.SetActive(true);
         }
 
         public void SetScore(float score, float quota)
@@ -53,6 +65,7 @@ namespace _project.Scripts.UI
         private void HandleRollClicked()
         {
             RollRequested?.Invoke();
+            rollRequestedUnity?.Invoke();
         }
     }
 }

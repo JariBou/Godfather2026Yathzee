@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace _project.Scripts.UI
@@ -19,6 +20,7 @@ namespace _project.Scripts.UI
         public event Action<int> OfferClicked;
         public event Action<int> InventorySlotClicked;
         public event Action FinishRequested;
+        public UnityEvent FinishRequestedUnity;
 
         private void OnEnable()
         {
@@ -69,6 +71,7 @@ namespace _project.Scripts.UI
         private void HandleFinishClicked()
         {
             FinishRequested?.Invoke();
+            FinishRequestedUnity?.Invoke();
         }
     }
 }

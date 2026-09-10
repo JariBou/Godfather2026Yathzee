@@ -23,7 +23,7 @@ namespace _project.Scripts.DieLaunching
         {
             while (_diceQueue.Count > 0)
             {
-                Destroy(_diceQueue.Dequeue());
+                Destroy(_diceQueue.Dequeue().gameObject);
             }
         }
 
