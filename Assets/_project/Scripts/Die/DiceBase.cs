@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using _project.Scripts.Effects;
-using _project.Scripts.ScriptableObjects;
 using _project.Scripts.ScriptableObjects.Dice;
 using AYellowpaper.SerializedCollections;
+using JetBrains.Annotations;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -17,7 +17,24 @@ namespace _project.Scripts.Die
         [FormerlySerializedAs("_facesValues"),SerializeField] protected List<int> facesValues = new(6) { 1, 2, 3, 4, 5, 6 };
         [FormerlySerializedAs("_faceIdMap"),SerializeField] protected SerializedDictionary<GameObject, int> faceIdMap = new();
         [SerializeField] protected ScoreEffectScript scoreEffectScript;
-        
+        [CanBeNull] private AudioManager _audioManager;
+
+        [SerializeField] private float _soundCooldown = 0.2f;
+        private float _lastSoundTime;
+
+        private void Awake()
+        {
+            _audioManager = FindFirstObjectByType<AudioManager>();
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            if (!(Time.time - _lastSoundTime > _soundCooldown)) return;
+
+            _lastSoundTime = Time.time;
+            _audioManager?.DiceSoundPlayer.PlayRandomSound();
+        }
+
         private void Reset()
         {
             foreach (Transform t in transform)

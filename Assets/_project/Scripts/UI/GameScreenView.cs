@@ -28,6 +28,8 @@ namespace _project.Scripts.UI
         [SerializeField] private ItemVisualView[] _inventoryPassives = new ItemVisualView[3];
 
         [SerializeField] private GameObject _background;
+        [SerializeField] private GameManager _gameManager;
+        
         public UnityEvent gameReset;
         public UnityEvent rollRequestedUnity;
         
@@ -39,7 +41,10 @@ namespace _project.Scripts.UI
         {
             if (_rollButton != null)
                 _rollButton.onClick.AddListener(HandleRollClicked);
-            
+
+            _gameManager.NextTurn();
+            SetTurn(_gameManager.CurrentStage+1);
+            SetScore(0, _gameManager.ScoreData.GetTargetScoreForStageInt(_gameManager.CurrentStage));
             _background.SetActive(false);
             gameReset?.Invoke();
         }
@@ -58,6 +63,11 @@ namespace _project.Scripts.UI
             string quotaLabel = quota.ToString("N0", DisplayCulture);
 
             _scoreText.text = $"{scoreLabel} / <b><u>{quotaLabel}</u></b>";
+        }
+
+        public void SetScore(int score, int target)
+        {
+            _scoreText.text = $"{score} / <b><u>{target}</u></b>";
         }
 
         public void SetTurn(int turn)

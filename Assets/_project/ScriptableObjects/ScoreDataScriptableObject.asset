@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afe35e7f5a67a047861483478c62e4d, type: 3}
   m_Name: ScoreDataScriptableObject
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.ScoreDataScriptableObject
-  _initialTargetScore: 1
-  _perStageMultiplier: 2.5
+  _initialTargetScore: 6
+  _perStageMultiplier: 1.75

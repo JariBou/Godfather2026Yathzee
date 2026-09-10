@@ -847,7 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5f41b909227400dbcc4a42b03a21c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.Die.Dice42
-  diceData: {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
+  diceData: {fileID: 11400000, guid: 8e6949d85a6214f489a76949e0aae433, type: 2}
   facesValues: 010000000200000003000000040000002a0000002a000000
   faceIdMap:
     _serializedList:
@@ -862,6 +862,7 @@ MonoBehaviour:
     - Key: {fileID: 159346355484797554}
       Value: 4
   scoreEffectScript: {fileID: -8313792042258631889, guid: d70d00766ffc7634cb82496ea292c377, type: 3}
+  _soundCooldown: 0.2
 --- !u!4 &7538356448069179604 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0a58c762e3d17b448adf8de034bcab16, type: 3}

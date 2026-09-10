@@ -12,6 +12,9 @@ namespace _project.Scripts.DieLaunching
         public event Action<DiceBase> StoppedMoving;
         private bool _isMoving;
 
+        [SerializeField] private float _inactivityTargetTime = 0.3f;
+        private float _inactivityTimer;
+
         private void Reset()
         {
             _rigidbody ??= GetComponent<Rigidbody>();
@@ -33,9 +36,16 @@ namespace _project.Scripts.DieLaunching
 
             if (_rigidbody.linearVelocity.magnitude < 0.01f && _isMoving)
             {
+                _inactivityTimer += Time.fixedDeltaTime;
+                if (!(_inactivityTimer > _inactivityTargetTime)) return;
+
                 _isMoving = false;
                 StoppedMoving?.Invoke(_diceBase);
                 _rigidbody.isKinematic = true;
+            }
+            else
+            {
+                _inactivityTimer = 0;
             }
         }
     }

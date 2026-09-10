@@ -7,12 +7,12 @@ namespace _project.Scripts.Die
         public override async Awaitable ApplyEffect(GameState gamestate)
         {
             int upFaceValue = GetUpFaceValue();
+            SpawnScoreEffect(upFaceValue);
+            gamestate.AddScore(upFaceValue);
             if (upFaceValue == 42)
             {
                 gamestate.ActiveDice.Push(await gamestate.Launcher.LaunchDieAndWaitForStop(diceData.Prefab));
             }
-            gamestate.AddScore(upFaceValue);
-            SpawnScoreEffect(upFaceValue);
             Debug.Log("Applying Dice42 Effect");
         }
     }
