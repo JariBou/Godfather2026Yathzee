@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5339f3e5eb34dc09b28b22b5c32dad9, type: 3}
   m_Name: BillyGoatSkull
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Relics.Trophy42
-  _name: 
+  _name: bouc
+  _icon: {fileID: 21300000, guid: 3a7b849d81efd814d8f126ff35117cc7, type: 3}
   _description: 
-  _effect: {fileID: 11400000, guid: 8fe88abbaea35c540a17648edfbf4c42, type: 2}
+  _effect: {fileID: 11400000, guid: d098bb6df427dd749b742967d47fd352, type: 2}

@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d897e879ab9641a3a5ad512f239efdd1, type: 3}
   m_Name: MysticBall
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Relics.RandomOutcomeRelic
+  _name: 
+  _icon: {fileID: 21300000, guid: c6bac08df78e31846b3a926ad4824d9d, type: 3}
+  _description: 
   _effect: {fileID: 11400000, guid: 64dc524c19b818f48a18756349e0b9c3, type: 2}

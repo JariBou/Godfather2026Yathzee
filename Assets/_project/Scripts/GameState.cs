@@ -4,6 +4,8 @@ using System.Linq;
 using _project.Scripts.Die;
 using _project.Scripts.DieLaunching;
 using _project.Scripts.ScriptableObjects;
+using _project.Scripts.ScriptableObjects.Dice;
+using _project.Scripts.ScriptableObjects.Relics;
 using UnityEngine;
 
 namespace _project.Scripts

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _project.Scripts.ScriptableObjects.Dice;
+using UnityEngine;
 
 namespace _project.Scripts.ScriptableObjects.Relics.Effects
 {

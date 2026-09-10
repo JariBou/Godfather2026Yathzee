@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: GoatSkull
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Relics.Trophy42
   _name: 
+  _icon: {fileID: 21300000, guid: f3567dde8c6475a4281bf2c22165939e, type: 3}
   _description: 
   _effect: {fileID: 11400000, guid: 8fe88abbaea35c540a17648edfbf4c42, type: 2}

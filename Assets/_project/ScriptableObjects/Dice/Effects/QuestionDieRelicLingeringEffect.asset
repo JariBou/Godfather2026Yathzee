@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d3a493f1b8b4ad0bb536a7d84daab7e, type: 3}
   m_Name: QuestionDieRelicLingeringEffect
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Effects.QuestionDieRelicLingeringEffect
-  priority: 0
+  priority: 3
   _relicDatas:
     _serializedList: []
   _fizzleIfNoRelics: 1

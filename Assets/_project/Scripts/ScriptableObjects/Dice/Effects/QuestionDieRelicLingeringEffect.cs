@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using _project.Scripts.ScriptableObjects.Relics;
 using AYellowpaper.SerializedCollections;
 using UnityEngine;
 

@@ -3,6 +3,8 @@ using _project.Scripts.ScriptableObjects;
 using AYellowpaper.SerializedCollections;
 using System.Collections.Generic;
 using System.Linq;
+using _project.Scripts.ScriptableObjects.Dice;
+using _project.Scripts.ScriptableObjects.Relics;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -83,7 +85,7 @@ namespace _project.Scripts
         public void TakeDice(int shopIndex, int invIndex)
         {
             (_shopDicePool[shopIndex], _gameManager.Inventory[invIndex]) = (_gameManager.Inventory[invIndex], _shopDicePool[shopIndex]);
-            Debug.Log("Dés" + shopIndex + invIndex);
+            Debug.Log("Dï¿½s" + shopIndex + invIndex);
 
         }
 

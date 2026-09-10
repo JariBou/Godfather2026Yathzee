@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: MuttonSkull
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Relics.Trophy42
   _name: 
+  _icon: {fileID: 21300000, guid: 5f62c9a18013dfc4fbc37994e14d9c8a, type: 3}
   _description: 
-  _effect: {fileID: 11400000, guid: 8fe88abbaea35c540a17648edfbf4c42, type: 2}
+  _effect: {fileID: 11400000, guid: 8f10de8086b028044a03e959fa5812ff, type: 2}

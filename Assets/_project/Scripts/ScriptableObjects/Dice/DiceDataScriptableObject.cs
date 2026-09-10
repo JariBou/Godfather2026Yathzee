@@ -1,7 +1,7 @@
 ﻿using _project.Scripts.Die;
 using UnityEngine;
 
-namespace _project.Scripts.ScriptableObjects
+namespace _project.Scripts.ScriptableObjects.Dice
 {
     [CreateAssetMenu(fileName = "DiceDataScriptableObject", menuName = "Chaos Yahtzee/Dice Data")]
     public class DiceDataScriptableObject : ScriptableObject
