@@ -7,6 +7,7 @@ using _project.Scripts.ScriptableObjects.Dice;
 using _project.Scripts.ScriptableObjects.Relics;
 using UnityEngine;
 using UnityEngine.Serialization;
+using _project.Scripts.UI;
 
 namespace _project.Scripts
 {
@@ -22,6 +23,8 @@ namespace _project.Scripts
         [SerializeField] private int _proposedRelicCount = 1;
         
         [SerializeField] private GameManager _gameManager;
+
+        [SerializeField] private ShopView _diceShopView;
 
         private int _shopIndex = -1;
         private int _invIndex = -1;
@@ -63,6 +66,25 @@ namespace _project.Scripts
                 _shopDicePool.Add(randItem);
             }
 
+            RefreshDiceVisuals();
+        }
+
+        private void RefreshDiceVisuals()
+        {
+            if (_diceShopView == null || _gameManager == null)
+                return;
+
+            for (int i = 0; i < _shopDicePool.Count; i++)
+            {
+                _diceShopView.SetOffer(
+                    i, _shopDicePool[i].Icon, Color.white, "");
+            }
+
+            for (int i = 0; i < _gameManager.Inventory.Count; i++)
+            {
+                _diceShopView.SetInventoryItem(
+                    i, _gameManager.Inventory[i].Icon, Color.white, "");
+            }
         }
 
         public void CloseShop()
@@ -94,6 +116,8 @@ namespace _project.Scripts
             }
             
             (_shopDicePool[shopIndex], _gameManager.Inventory[invIndex]) = (_gameManager.Inventory[invIndex], _shopDicePool[shopIndex]);
+
+            RefreshDiceVisuals();
         }
 
         public void TakeItem(int shopIndex, int invIndex)
