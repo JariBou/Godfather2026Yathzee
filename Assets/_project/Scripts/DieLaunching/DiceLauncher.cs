@@ -8,14 +8,13 @@ namespace _project.Scripts.DieLaunching
 {
     public class DiceLauncher : MonoBehaviour
     {
-        [SerializeField, RequiredType(typeof(Rigidbody))] private DiceBase _dicePrefab;
         [SerializeField, Range(0f, 45f)] private float _randAngleMax = 25f;
         [SerializeField, MinMaxSlider(0.5f, 50f)] private Vector2 _randForce = new (25f, 30f);
         [SerializeField, MinMaxSlider(0.5f, 50f)] private Vector2 _randAngularForce = new (0f, 25f);
         [SerializeField] private float _waveLaunchDelay = 0.3f;
         
         [SerializeField, Foldout("DEBUG")] private int _maxDiceCount = 50;
-        [SerializeField, Foldout("DEBUG")] private int _waveLaunchCount = 5;
+        
         private Queue<DiceBase> _diceQueue = new();
 
         [Button(enabledMode: EButtonEnableMode.Playmode)]
@@ -98,7 +97,6 @@ namespace _project.Scripts.DieLaunching
 
         private void LaunchedDieBroadcasterOnStoppedMoving(DiceBase diceBase)
         {
-            Debug.Log($"A Die has stopped moving, face value is: {diceBase.GetUpFaceValue()}");
         }
 
         private void OnDrawGizmos()

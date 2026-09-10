@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Globalization;
 using TMPro;
+using UnityEngine.Events;
 
 namespace _project.Scripts.UI
 {
@@ -15,7 +16,9 @@ namespace _project.Scripts.UI
         [SerializeField] private TMP_Text _highScoreText;
 
         public event Action PlayRequested;
+        public UnityEvent PlayRequestedUnity;
         public event Action QuitRequested;
+        public UnityEvent QuitRequestedUnity;
 
         private void OnEnable()
         {
@@ -38,11 +41,14 @@ namespace _project.Scripts.UI
         private void HandlePlayClicked()
         {
             PlayRequested?.Invoke();
+            PlayRequestedUnity?.Invoke();
         }
 
         private void HandleQuitClicked()
         {
             QuitRequested?.Invoke();
+            QuitRequestedUnity?.Invoke();
+            Application.Quit();
         }
 
         public void SetHighScore(double score, int turnReached)
@@ -59,7 +65,7 @@ namespace _project.Scripts.UI
         public void ShowNoHighScore()
         {
             _highScoreText.text =
-                "<b>Meilleur score</b>\nAucune partie terminée";
+                "<b>Meilleur score</b>\nAucune partie terminï¿½e";
         }
     }
 }

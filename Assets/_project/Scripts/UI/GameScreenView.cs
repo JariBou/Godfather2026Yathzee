@@ -3,7 +3,6 @@ using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _project.Scripts.UI

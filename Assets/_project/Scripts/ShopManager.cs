@@ -1,5 +1,3 @@
-using _project.Scripts.Die;
-using _project.Scripts.ScriptableObjects;
 using AYellowpaper.SerializedCollections;
 using System.Collections.Generic;
 using System.Linq;

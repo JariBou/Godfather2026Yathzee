@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading;
+﻿using System.Collections.Generic;
 using _project.Scripts.Die;
 using _project.Scripts.DieLaunching;
 using _project.Scripts.ScriptableObjects;
@@ -9,7 +7,8 @@ using _project.Scripts.ScriptableObjects.Relics;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public enum State
 {
@@ -31,14 +30,15 @@ namespace _project.Scripts
         public int CurrentStage { get; private set; } = -1;
 
         [SerializeField] private List<DiceDataScriptableObject> _inventory;
-        [HideInInspector] public List<DiceDataScriptableObject> Inventory { get { return _inventory; } set { _inventory = value; } }
+        public List<DiceDataScriptableObject> Inventory { get { return _inventory; } set { _inventory = value; } }
         [SerializeField] private List<RelicScriptableObjectBase> _relics;
-        [HideInInspector] public List<RelicScriptableObjectBase> Relics { get { return _relics; } set { _relics = value; } }
+        public List<RelicScriptableObjectBase> Relics { get { return _relics; } set { _relics = value; } }
 
-        public UnityEvent GameStateResolved;
+        [FormerlySerializedAs("GameStateResolved")] public UnityEvent RoundWon;
+        public UnityEvent<GameState> RoundLost;
         public UnityEvent<int, int> ScoreUpdated;
-        private Awaitable _speedUpIfTimeExceededTask;
-        private CancellationTokenSource _speedUpIfTimeExceededCancellationTokenSource = new();
+        // private Awaitable _speedUpIfTimeExceededTask;
+        // private CancellationTokenSource _speedUpIfTimeExceededCancellationTokenSource = new();
 
         public State CurrentState => _state;
 
@@ -68,11 +68,6 @@ namespace _project.Scripts
         public void ChangeStateToPlay()
         {
             ChangeState(State.Playing);
-        }
-
-        void Start()
-        {
-            // _ = DoRoundAsync();
         }
 
         public void ChangeState(State newState)
@@ -109,7 +104,8 @@ namespace _project.Scripts
 
             // _speedUpIfTimeExceededCancellationTokenSource = new CancellationTokenSource();
             _speedUpActivated = true;
-            _speedUpIfTimeExceededTask = SpeedUpIfTimeExceeded(6f, 2f);
+            _speedUpTimer = 0;
+            // _speedUpIfTimeExceededTask = SpeedUpIfTimeExceeded(6f, 2f);
         }
 
         private void OnScoreUpdated(int arg1, int arg2)
@@ -118,30 +114,50 @@ namespace _project.Scripts
         }
 
         private bool _speedUpActivated = false;
-        private async Awaitable SpeedUpIfTimeExceeded(float delay, float newTimeScale)
+        private float _speedUpTimer;
+        
+        private void Update()
         {
-            if (!_speedUpActivated) return;
-            await Awaitable.WaitForSecondsAsync(delay);
-            if (!_speedUpActivated) return;
-            // if (cancellationToken.IsCancellationRequested) return;
-            
-            Debug.Log($"GameManager::SpeedUpIfTimeExceeded: Speeding up time to {newTimeScale}");
-            Time.timeScale = newTimeScale;
-
-            if (newTimeScale >= 4) return;
-            _speedUpIfTimeExceededTask = SpeedUpIfTimeExceeded(3f * Time.timeScale, Time.timeScale+1);
-        } 
+            if (_speedUpActivated)
+            {
+                _speedUpTimer += Time.deltaTime;
+                if (_speedUpTimer >= 6f)
+                {
+                    Time.timeScale += 1;
+                    Debug.Log($"GameManager::Update: Speeding up time to {Time.timeScale}");
+        
+                    _speedUpTimer -= 6f;
+                }
+            }
+        }
+        
+        // Yeah so again Awaitables are  weird with cancellation so we'll be  using good old Update
+        
+        // private async Awaitable SpeedUpIfTimeExceeded(float delay, float newTimeScale)
+        // {
+        //     if (!_speedUpActivated) return;
+        //     await Awaitable.WaitForSecondsAsync(delay);
+        //     if (!_speedUpActivated) return;
+        //     // if (cancellationToken.IsCancellationRequested) return;
+        //     
+        //     Debug.Log($"GameManager::SpeedUpIfTimeExceeded: Speeding up time to {newTimeScale}");
+        //     Time.timeScale = newTimeScale;
+        //
+        //     if (newTimeScale >= 4) return;
+        //     _speedUpIfTimeExceededTask = SpeedUpIfTimeExceeded(3f * Time.timeScale, Time.timeScale+1);
+        // } 
 
         private void GameStateOnGameStateResolved(GameState gameState)
         {
             _speedUpActivated = false;
-            _speedUpIfTimeExceededTask?.Cancel();
+            // _speedUpIfTimeExceededTask?.Cancel();
             Debug.Log($"GameManager::GameStateOnGameStateResolved: setting time to 1");
             Time.timeScale = 1;
             
             if (gameState.CurrentRoundScore < gameState.TargetRoundScore)
             {
                 Debug.LogWarning($"Game state was resolved: You lost (score: {gameState.CurrentRoundScore}/{gameState.TargetRoundScore})");
+                OnGameOver(gameState);
                 return;
             }
             
@@ -149,10 +165,20 @@ namespace _project.Scripts
             _ = DelayedGameStateResolved(3f);
         }
 
+        private void OnGameOver(GameState gameState)
+        {
+            RoundLost?.Invoke(gameState);
+        }
+
+        public void StartRun()
+        {
+            CurrentStage = -1;
+        }
+
         private async Awaitable DelayedGameStateResolved(float delayTime)
         {
             await Awaitable.WaitForSecondsAsync(delayTime);
-            GameStateResolved?.Invoke();
+            RoundWon?.Invoke();
         }
 
 
