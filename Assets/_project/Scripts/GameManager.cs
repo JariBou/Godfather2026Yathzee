@@ -26,7 +26,9 @@ namespace _project.Scripts
         private GameState _gameState;
 
         [SerializeField] private List<DiceDataScriptableObject> _inventory;
+        [HideInInspector] public List<DiceDataScriptableObject> Inventory { get { return _inventory; } set { _inventory = value; } }
         [SerializeField] private List<RelicScriptableObjectBase> _relics;
+        [HideInInspector] public List<RelicScriptableObjectBase> Relics { get { return _relics; } set { _relics = value; } }
 
         public UnityEvent GameStateResolved;
 

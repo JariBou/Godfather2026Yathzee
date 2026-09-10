@@ -38,6 +38,11 @@ namespace _project.Scripts.UI
 
             if (_finishButton != null)
                 _finishButton.onClick.AddListener(HandleFinishClicked);
+            if (this.gameObject.name =="DiceShopScreen")
+                FindAnyObjectByType<GameManager>().ChangeStateToDiceShop();
+            else
+                FindAnyObjectByType<GameManager>().ChangeStateToRelicShop();
+            FindAnyObjectByType<ShopManager>().RefreshShop();
         }
 
         private void OnDisable()
