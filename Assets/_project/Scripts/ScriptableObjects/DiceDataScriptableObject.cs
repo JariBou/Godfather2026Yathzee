@@ -7,11 +7,13 @@ namespace _project.Scripts.ScriptableObjects
     public class DiceDataScriptableObject : ScriptableObject
     {
         [SerializeField] private string _name;
+        [SerializeField, TextArea] private string _description;
         [SerializeField] private Sprite _icon;
         [SerializeField] private DiceBase _prefab;
 
         public string Name => _name;
         public Sprite Icon => _icon;
         public DiceBase Prefab => _prefab;
+        public string Description => _description;
     }
 }

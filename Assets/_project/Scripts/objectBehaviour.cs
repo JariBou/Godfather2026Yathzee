@@ -4,6 +4,12 @@ namespace _project.Scripts
 {
     public abstract class RelicScriptableObjectBase : ScriptableObject
     {
+        [SerializeField] private string _name;
+        [SerializeField, TextArea] private string _description;
+
+        public string Name => _name;
+        public string Description => _description;
+
         public abstract void ApplyEffect(GameState gamestate);
     }
 
