@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4b64a036c9478587f3739d65091a2d, type: 3}
   m_Name: QuestionDieDiceLingeringEffect
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Effects.QuestionDieDiceLingeringEffect
-  priority: 3
+  priority: 2
   _diceDatas:
     _serializedList:
     - Key: {fileID: 11400000, guid: 500109a496ed25146b3165bbf2526d16, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 9e8cb7049f428a644ac04d32b95d2f88, type: 2}
       Value: 1
     - Key: {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
       Value: 1
