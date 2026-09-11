@@ -19,7 +19,7 @@ namespace _project.Scripts.Die
         [SerializeField] protected ScoreEffectScript scoreEffectScript;
         [CanBeNull] private AudioManager _audioManager;
 
-        [SerializeField] private float _soundCooldown = 0.2f;
+        [SerializeField] private float _soundCooldown = 0.4f;
         private float _lastSoundTime;
 
         private void Awake()
@@ -30,6 +30,7 @@ namespace _project.Scripts.Die
         private void OnCollisionEnter(Collision other)
         {
             if (!(Time.time - _lastSoundTime > _soundCooldown)) return;
+            if (other.gameObject.tag != "Floor") return;
 
             _lastSoundTime = Time.time;
             _audioManager?.DiceSoundPlayer.PlayRandomSound();
