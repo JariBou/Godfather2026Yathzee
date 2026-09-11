@@ -67,6 +67,12 @@ namespace _project.Scripts.UI
             MainMenuRequested?.Invoke();
             MenuRequestedUnity?.Invoke();
             
+            ReloadScene();
+        }
+
+        public void ReloadScene()
+        {
+            Time.timeScale = 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

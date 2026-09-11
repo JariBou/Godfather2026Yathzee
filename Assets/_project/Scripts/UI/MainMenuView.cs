@@ -34,6 +34,10 @@ namespace _project.Scripts.UI
             {
                 SetHighScore(prevScore, maxStage);
             }
+            else
+            {
+                ShowNoHighScore();
+            }
         }
 
         private void OnDisable()
@@ -64,15 +68,20 @@ namespace _project.Scripts.UI
                 "N0", CultureInfo.GetCultureInfo("fr-FR"));
 
             _highScoreText.text =
-                $"<b>Meilleur score</b>\n" +
-                $"{scoreLabel}\n" +
-                $"Tour atteint : {turnReached}";
+                $"<b>Stage Atteint<b>: {turnReached}\n" +
+                $"<b>Meilleur Score<b>: {scoreLabel}";
+            
+            // _highScoreText.text =
+                // $"<b>Meilleur score</b>\n" +
+                // $"{scoreLabel}\n" +
+                // $"Tour atteint : {turnReached}";
         }
 
         public void ShowNoHighScore()
         {
-            _highScoreText.text =
-                "<b>Meilleur score</b>\nAucune partie termin�e";
+            SetHighScore(0, 0);
+            // _highScoreText.text =
+            //     "<b>Meilleur score</b>\nAucune partie termin�e";
         }
     }
 }
