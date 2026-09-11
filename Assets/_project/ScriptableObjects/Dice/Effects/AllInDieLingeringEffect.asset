@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 401135a339cc483f92f040ddf75770b6, type: 3}
   m_Name: AllInDieLingeringEffect
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Dice.Effects.AllInDieLingeringEffect
-  priority: 2
+  priority: 1
   _diceData: {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
