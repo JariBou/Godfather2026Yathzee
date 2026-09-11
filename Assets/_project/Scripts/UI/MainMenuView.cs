@@ -27,6 +27,13 @@ namespace _project.Scripts.UI
 
             if (_quitButton != null)
                 _quitButton.onClick.AddListener(HandleQuitClicked);
+
+            int prevScore = PlayerPrefs.GetInt("max_score", -1);
+            int maxStage = PlayerPrefs.GetInt("max_stage", -1);
+            if (maxStage > -1)
+            {
+                SetHighScore(prevScore, maxStage);
+            }
         }
 
         private void OnDisable()

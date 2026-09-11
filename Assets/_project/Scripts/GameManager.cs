@@ -168,6 +168,17 @@ namespace _project.Scripts
         private void OnGameOver(GameState gameState)
         {
             RoundLost?.Invoke(gameState);
+            int maxStage = PlayerPrefs.GetInt("max_stage", 0);
+            int prevScore = PlayerPrefs.GetInt("max_score", 0);
+            if (maxStage == gameState.CurrentStage && gameState.CurrentRoundScore > prevScore)
+            {
+                PlayerPrefs.SetInt("max_score", gameState.CurrentRoundScore);
+            }
+            else if (gameState.CurrentStage > maxStage)
+            {
+                PlayerPrefs.SetInt("max_stage", gameState.CurrentStage);
+                PlayerPrefs.SetInt("max_score", gameState.CurrentRoundScore);
+            }
         }
 
         public void StartRun()

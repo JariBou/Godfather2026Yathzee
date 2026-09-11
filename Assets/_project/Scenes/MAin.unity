@@ -313,6 +313,41 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2110731893348695235, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
   m_PrefabInstance: {fileID: 6902060422091730361}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &584828660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 584828661}
+  m_Layer: 5
+  m_Name: ScoreEffects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &584828661
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584828660}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 763564510}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -442, y: 456}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &738614726 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5084907943531392033, guid: a6712335409e0214e9077ff2a612fc4a, type: 3}
@@ -2221,8 +2256,14 @@ PrefabInstance:
     - {fileID: 6652311006517169615, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
     - {fileID: 7552892365500077101, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
     - {fileID: 6105953301605266807, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2339322896804098773, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 584828661}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9171173943496371786, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6902060422091730365}
     - targetCorrespondingSourceObject: {fileID: 4108842277589213858, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2104032922}
@@ -2264,6 +2305,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c61b521081d3c41ad192cc1cbae021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.GameScreenView
+--- !u!1 &6902060422091730364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9171173943496371786, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
+  m_PrefabInstance: {fileID: 6902060422091730361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6902060422091730365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6902060422091730364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51de4523ab684c7bbde492266583bc66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.Effects.UIScore.ScoreMultiplierVfxManager
+  _effectPrefab: {fileID: 4678318676179899391, guid: 7504d6091fc2eec43b7b9b8635b128c0, type: 3}
+  _parent: {fileID: 584828661}
 --- !u!1001 &7536806484788307840
 PrefabInstance:
   m_ObjectHideFlags: 0
