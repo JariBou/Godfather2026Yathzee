@@ -14,4 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Relics.Effects.RandomEffectsEffect
   priority: 3
   _possibleOutcomes:
-    _serializedList: []
+    _serializedList:
+    - Key: Oui
+      Value: {fileID: 11400000, guid: b7695925d7dd6eb41927a96f7dfb5a2b, type: 2}
+    - Key: Probablement
+      Value: {fileID: 11400000, guid: b972a893a34e2614ea9a84ff6426eb96, type: 2}
+    - Key: Probablement pas
+      Value: {fileID: 11400000, guid: 389af54e046e44d449693ca7f28ec34c, type: 2}
+    - Key: Non
+      Value: {fileID: 11400000, guid: 30320bb3502c039479f775663db41c6b, type: 2}

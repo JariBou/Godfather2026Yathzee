@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01a0b7929134bb6a110ab6653375c5a, type: 3}
   m_Name: Silver Die
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.DiceDataScriptableObject
-  _name: 
-  _description: 
+  _name: "D\xE9 en Argent"
+  _description: "Un d\xE9 en argent, sans effet particulier.\n\n5 / 10 / 15 / 20
+    / 25 / 30"
   _icon: {fileID: 21300000, guid: e30c2ebfec869e8419ca22390a042c76, type: 3}
   _prefab: {fileID: -2818284881230932013, guid: 9355a64d5a7a5a544bf7f46317b8e2a4, type: 3}

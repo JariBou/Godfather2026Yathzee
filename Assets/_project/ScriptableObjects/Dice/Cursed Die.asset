@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01a0b7929134bb6a110ab6653375c5a, type: 3}
   m_Name: Cursed Die
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.DiceDataScriptableObject
-  _name: 
-  _description: 
+  _name: "D\xE9 corrompu"
+  _description: "Si ce d\xE9 tombe sur une face 1, transforme al\xE9atoirement un
+    de vos d\xE9 en D\xE9 Corrompu.\n\nCet effet s'active avant vos reliques.\n\n1
+    / 1 / 1 / 1 / 1 / 3000"
   _icon: {fileID: 21300000, guid: 600f5db6ce5e3d24e91b0e0b39f8a8d1, type: 3}
   _prefab: {fileID: 6276218925798181282, guid: 5594add8018b79e4285e238ee8485a67, type: 3}

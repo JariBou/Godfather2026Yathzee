@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d897e879ab9641a3a5ad512f239efdd1, type: 3}
   m_Name: FortuneCookie
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Relics.RandomOutcomeRelic
-  _name: 
+  _name: Fortune Cookie
   _icon: {fileID: 21300000, guid: 5924928a40d1d3c41bc7560969f7e134, type: 3}
-  _description: 
+  _description: "Chaque tour, donne un pr\xE9sage al\xE9atoire entre :\nGrande richesse
+    \u2192 Multiplie le score par 8\nBonne augure \u2192 Multiplie le score par 2\nLe
+    calme avant la temp\xEAte \u2192 Ne fait rien\nMort imminente \u2192 Divise le
+    score par 8"
   _effect: {fileID: 11400000, guid: 551d7247bbcf4694084f60dff88736de, type: 2}

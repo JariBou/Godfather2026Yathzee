@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01a0b7929134bb6a110ab6653375c5a, type: 3}
   m_Name: Question Die
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.DiceDataScriptableObject
-  _name: 
-  _description: 
+  _name: "D\xE9 \"?\""
+  _description: "Si ce d\xE9 tombe sur une face 50 ?, transforme al\xE9atoirement
+    un de vos d\xE9 en un autre d\xE9.\n\nSi ce d\xE9 tombe sur une face 50 ??, transforme
+    al\xE9atoirement une de vos reliques en une autre relique.\n\nCet effet s'active
+    avant vos reliques.\n\n50 ? / 50 ?? / 50 / 50 / 50 / 200"
   _icon: {fileID: 21300000, guid: 436ce10a82c4e8b46ab04be36020b8ec, type: 3}
   _prefab: {fileID: 8738725631982925946, guid: 03ec99426748de7498473a325cf68c3d, type: 3}

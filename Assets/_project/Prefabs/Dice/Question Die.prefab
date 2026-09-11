@@ -835,6 +835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.DieLaunching.LaunchedDieBroadcaster
   _rigidbody: {fileID: 4834855596845306836}
   _diceBase: {fileID: 8738725631982925946}
+  _inactivityTargetTime: 0.3
 --- !u!114 &8738725631982925946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,6 +863,7 @@ MonoBehaviour:
     - Key: {fileID: 159346355484797554}
       Value: 4
   scoreEffectScript: {fileID: -8313792042258631889, guid: d70d00766ffc7634cb82496ea292c377, type: 3}
+  _soundCooldown: 0.2
   _diceEffect: {fileID: 11400000, guid: 97e0d11af20955c45af6d58581f9c763, type: 2}
   _relicEffect: {fileID: 11400000, guid: fe10613816738004299b54429a1ef85b, type: 2}
 --- !u!4 &7538356448069179604 stripped
