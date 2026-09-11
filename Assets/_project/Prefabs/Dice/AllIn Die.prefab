@@ -848,7 +848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9099139b97ed42208a1cbc3229c6d65f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.Die.AllInDie
-  diceData: {fileID: 0}
+  diceData: {fileID: 11400000, guid: 9e8cb7049f428a644ac04d32b95d2f88, type: 2}
   facesValues: 01000000f4010000f4010000f4010000f4010000f4010000
   faceIdMap:
     _serializedList:
