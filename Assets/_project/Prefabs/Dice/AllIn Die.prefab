@@ -723,14 +723,14 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 0a58c762e3d17b448adf8de034bcab16, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1b9b801bddd973746b8a400d8158d65c, type: 2}
+      objectReference: {fileID: 2100000, guid: 21ae02f6947e80448bcdb082554c94f6, type: 2}
     - target: {fileID: -5754084199372789682, guid: 0a58c762e3d17b448adf8de034bcab16, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -5495902117074765545, guid: fad6404454db28445a1853c79bfcab80, type: 3}
     - target: {fileID: 919132149155446097, guid: 0a58c762e3d17b448adf8de034bcab16, type: 3}
       propertyPath: m_Name
-      value: Bronze Die
+      value: AllIn Die
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -765,7 +765,7 @@ PrefabInstance:
       addedObject: {fileID: 4135942497195481299}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a58c762e3d17b448adf8de034bcab16, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -2818284881230932013}
+      addedObject: {fileID: 6342312492861051935}
   m_SourcePrefab: {fileID: 100100000, guid: 0a58c762e3d17b448adf8de034bcab16, type: 3}
 --- !u!1 &7194024949693022830 stripped
 GameObject:
@@ -834,9 +834,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.DieLaunching.LaunchedDieBroadcaster
   _rigidbody: {fileID: 4834855596845306836}
-  _diceBase: {fileID: -2818284881230932013}
+  _diceBase: {fileID: 6342312492861051935}
   _inactivityTargetTime: 0.3
---- !u!114 &-2818284881230932013
+--- !u!114 &6342312492861051935
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -845,11 +845,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7194024949693022830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcb082b43f284992a967aa00e3ec008f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9099139b97ed42208a1cbc3229c6d65f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.Die.BasicDice
-  diceData: {fileID: 11400000, guid: 500109a496ed25146b3165bbf2526d16, type: 2}
-  facesValues: 020000000400000006000000080000000a0000000c000000
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.Die.AllInDie
+  diceData: {fileID: 0}
+  facesValues: 01000000f4010000f4010000f4010000f4010000f4010000
   faceIdMap:
     _serializedList:
     - Key: {fileID: 1289056679750862235}
@@ -865,7 +865,8 @@ MonoBehaviour:
     - Key: {fileID: 159346355484797554}
       Value: 4
   scoreEffectScript: {fileID: -8313792042258631889, guid: d70d00766ffc7634cb82496ea292c377, type: 3}
-  _soundCooldown: 0.2
+  _soundCooldown: 0.4
+  effect: {fileID: 11400000, guid: 278be10ff4b962d479de5237e851f0b0, type: 2}
 --- !u!4 &7538356448069179604 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0a58c762e3d17b448adf8de034bcab16, type: 3}
