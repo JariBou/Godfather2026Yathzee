@@ -76,14 +76,28 @@ namespace _project.Scripts
 
             for (int i = 0; i < _shopDicePool.Count; i++)
             {
-                _diceShopView.SetOffer(
-                    i, _shopDicePool[i].Icon, Color.white, "");
+                var dice = _shopDicePool[i];
+
+                if (dice != null)
+                    _diceShopView.SetOffer(i, dice.Icon, Color.white, "");
+                else
+                    _diceShopView.ClearOffer(i);
+
+                _diceShopView.SetOfferTooltip(i, dice);
             }
 
-            for (int i = 0; i < _gameManager.Inventory.Count; i++)
+            for (int i = 0; i < 5; i++)
             {
-                _diceShopView.SetInventoryItem(
-                    i, _gameManager.Inventory[i].Icon, Color.white, "");
+                var dice = i < _gameManager.Inventory.Count
+                    ? _gameManager.Inventory[i]
+                    : null;
+
+                if (dice != null)
+                    _diceShopView.SetInventoryItem(i, dice.Icon, Color.white, "");
+                else
+                    _diceShopView.ClearInventoryItem(i);
+
+                _diceShopView.SetInventoryTooltip(i, dice);
             }
         }
 
@@ -100,6 +114,8 @@ namespace _project.Scripts
                     _passiveShopView.SetOffer(i, relic.Icon, Color.white, "");
                 else
                     _passiveShopView.ClearOffer(i);
+
+                _passiveShopView.SetOfferTooltip(i, relic);
             }
 
             for (int i = 0; i < 3; i++)
@@ -113,6 +129,8 @@ namespace _project.Scripts
                         i, relic.Icon, Color.white, "");
                 else
                     _passiveShopView.ClearInventoryItem(i);
+
+                _passiveShopView.SetInventoryTooltip(i, relic);
             }
         }
 
