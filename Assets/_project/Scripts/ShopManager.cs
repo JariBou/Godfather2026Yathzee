@@ -1,3 +1,4 @@
+using System;
 using AYellowpaper.SerializedCollections;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +7,7 @@ using _project.Scripts.ScriptableObjects.Relics;
 using UnityEngine;
 using UnityEngine.Serialization;
 using _project.Scripts.UI;
+using Random = UnityEngine.Random;
 
 namespace _project.Scripts
 {
@@ -27,6 +29,10 @@ namespace _project.Scripts
 
         private int _shopIndex = -1;
         private int _invIndex = -1;
+
+        public event Action Swapped; 
+        public event Action<int, State> InventoryClicked; 
+        public event Action<int, State> OfferClicked; 
     
 
         public void RefreshShop()
@@ -165,6 +171,7 @@ namespace _project.Scripts
             (_shopDicePool[shopIndex], _gameManager.Inventory[invIndex]) = (_gameManager.Inventory[invIndex], _shopDicePool[shopIndex]);
 
             RefreshDiceVisuals();
+            Swapped?.Invoke();
         }
 
         public void TakeItem(int shopIndex, int invIndex)
@@ -185,19 +192,21 @@ namespace _project.Scripts
             (_shopItemPool[shopIndex], _gameManager.Relics[invIndex]) = (_gameManager.Relics[invIndex], _shopItemPool[shopIndex]);
 
             RefreshPassiveVisuals();
+            Swapped?.Invoke();
         }
 
         public void ChooseShop(int index)
         {
             _shopIndex = index;
 
+            OfferClicked?.Invoke(index, _gameManager.CurrentState);
             if (_shopIndex!= -1 && _invIndex != -1)
             {
-                if (FindAnyObjectByType<GameManager>().CurrentState == State.ShopDice)
+                if (_gameManager.CurrentState == State.ShopDice)
                 {
                     TakeDice(_shopIndex, _invIndex);
                 }
-                else if (FindAnyObjectByType<GameManager>().CurrentState == State.ShopObject)
+                else if (_gameManager.CurrentState == State.ShopObject)
                 {
                     TakeItem(_shopIndex, _invIndex);
                 }
@@ -210,13 +219,14 @@ namespace _project.Scripts
         {
             _invIndex = index;
 
+            InventoryClicked?.Invoke(index, _gameManager.CurrentState);
             if (_shopIndex != -1 && _invIndex != -1)
             {
-                if (FindAnyObjectByType<GameManager>().CurrentState == State.ShopDice)
+                if (_gameManager.CurrentState == State.ShopDice)
                 {
                     TakeDice(_shopIndex, _invIndex);
                 }
-                else if (FindAnyObjectByType<GameManager>().CurrentState == State.ShopObject)
+                else if (_gameManager.CurrentState == State.ShopObject)
                 {
                     TakeItem(_shopIndex, _invIndex);
                 }
