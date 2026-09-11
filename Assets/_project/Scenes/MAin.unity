@@ -983,7 +983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3518103881715996830, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
       propertyPath: _randForce.x
-      value: 12.735294
+      value: 13.4
       objectReference: {fileID: 0}
     - target: {fileID: 3518103881715996830, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
       propertyPath: _randForce.y
@@ -2213,7 +2213,7 @@ PrefabInstance:
     - target: {fileID: 3098572028431451916, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
     - target: {fileID: 3098572028431451916, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190080
