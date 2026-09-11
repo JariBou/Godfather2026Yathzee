@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5339f3e5eb34dc09b28b22b5c32dad9, type: 3}
   m_Name: Replay
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Relics.Trophy42
-  _name: "Cr\xE2ne de Mouton"
+  _name: Replay !
   _icon: {fileID: 21300000, guid: 3d6c79bbe33edbd4c95a32a000328f68, type: 3}
   _description: "Chaque tour, relance chacun de vos D\xE9s 1 fois."
   _effect: {fileID: 11400000, guid: 5afc11f6529d4164bb9259e50272604c, type: 2}
