@@ -835,7 +835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.DieLaunching.LaunchedDieBroadcaster
   _rigidbody: {fileID: 4834855596845306836}
   _diceBase: {fileID: 8738725631982925946}
-  _inactivityTargetTime: 0.3
+  _inactivityTargetTime: 0.5
 --- !u!114 &8738725631982925946
 MonoBehaviour:
   m_ObjectHideFlags: 0
