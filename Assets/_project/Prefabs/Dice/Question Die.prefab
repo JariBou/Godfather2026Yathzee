@@ -849,7 +849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.Die.QuestionDie
   diceData: {fileID: 11400000, guid: 13f46184c98c4884e95bbc95e00a5de0, type: 2}
-  facesValues: 010000000200000003000000040000000500000006000000
+  facesValues: fffffffffeffffff32000000320000003200000032000000
   faceIdMap:
     _serializedList:
     - Key: {fileID: 1289056679750862235}
