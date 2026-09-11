@@ -247,7 +247,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 8}
+  m_AnchoredPosition: {x: 0, y: -21}
   m_SizeDelta: {x: 800, y: 40}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &2947756590043378131
@@ -280,8 +280,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Inventaire des passifs
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
+  m_sharedMaterial: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -417,8 +417,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ROLL !
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
+  m_sharedMaterial: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2226,7 +2226,18 @@ MonoBehaviour:
   - {fileID: 7348349108985602029}
   - {fileID: 2454554615286567164}
   - {fileID: 4919987084044013019}
+  _inventoryDiceTooltips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _inventoryPassiveTooltips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _background: {fileID: 0}
+  _gameManager: {fileID: 0}
   gameReset:
     m_PersistentCalls:
       m_Calls: []
@@ -2524,7 +2535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 8}
+  m_AnchoredPosition: {x: 0, y: -21}
   m_SizeDelta: {x: 800, y: 40}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &8666417656763350446
@@ -2557,8 +2568,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Inventaire des d\xE9s"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
+  m_sharedMaterial: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3715,8 +3726,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0 / <b><u>550</u></b>
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
+  m_sharedMaterial: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4610,8 +4621,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tour 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
+  m_sharedMaterial: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

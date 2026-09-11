@@ -1142,8 +1142,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Inventaire des d\xE9s"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
+  m_sharedMaterial: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1506,8 +1506,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Terminer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
+  m_sharedMaterial: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1780,8 +1780,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xC9changez vos d\xE9s contre ceux propos\xE9s au march\xE9."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
+  m_sharedMaterial: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3316,8 +3316,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Shop Time !
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
+  m_sharedMaterial: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3461,6 +3461,8 @@ MonoBehaviour:
   - {fileID: 8996157797430936993}
   - {fileID: 2031856312657482105}
   - {fileID: 3195708987911056899}
+  _offerTooltips: []
+  _inventoryTooltips: []
   FinishRequestedUnity:
     m_PersistentCalls:
       m_Calls: []
