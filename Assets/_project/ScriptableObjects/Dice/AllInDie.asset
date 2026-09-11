@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: AllInDie
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Dice.DiceDataScriptableObject
   _name: "D\xE9 All-in"
-  _description: "1 / 500 / 500 / 500 / 500 / 500\n\nSi ce d\xE9 tombe sur une face
-    1, transforme chacun de vos d\xE9s en D\xE9 Classique.\n\nCet effet s'active
-    avant vos reliques."
+  _description: "Si ce d\xE9 tombe sur une face 1, transforme chacun de vos d\xE9s
+    en D\xE9 Classique.\n\nCet effet s'active avant vos reliques.\n\n1 / 500 / 500
+    / 500 / 500 / 500"
   _icon: {fileID: -6681434353857130538, guid: 0c382b836d1fa60468de7d633d6d5608, type: 3}
   _prefab: {fileID: 6342312492861051935, guid: f5b37c8acf2193c4ab99cf03583a1124, type: 3}
