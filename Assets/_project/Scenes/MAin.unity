@@ -679,14 +679,14 @@ MonoBehaviour:
   _scoreData: {fileID: 11400000, guid: 127d8f30e24c24d4185fd76c8e9f4c2e, type: 2}
   _diceLauncher: {fileID: 980445019}
   _inventory:
-  - {fileID: 11400000, guid: edd35df10a3c11541b1344764e557c47, type: 2}
-  - {fileID: 11400000, guid: edd35df10a3c11541b1344764e557c47, type: 2}
-  - {fileID: 11400000, guid: edd35df10a3c11541b1344764e557c47, type: 2}
-  - {fileID: 11400000, guid: edd35df10a3c11541b1344764e557c47, type: 2}
-  - {fileID: 11400000, guid: edd35df10a3c11541b1344764e557c47, type: 2}
+  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
+  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
+  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
+  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
+  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
   _relics:
-  - {fileID: 11400000, guid: a388ac1bec532024a9ee981be05d6db0, type: 2}
-  - {fileID: 11400000, guid: d7d30db6cdcc78f4aadd37a7345ef1b7, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   RoundWon:
     m_PersistentCalls:
