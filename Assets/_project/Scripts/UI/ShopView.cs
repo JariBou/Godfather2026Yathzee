@@ -26,6 +26,7 @@ namespace _project.Scripts.UI
         [SerializeField] private ItemTooltipTrigger[] _inventoryTooltips = Array.Empty<ItemTooltipTrigger>();
 
         public event Action<int> OfferClicked;
+        public event Action Refreshed;
         public event Action<int> InventorySlotClicked;
         public event Action FinishRequested;
         public UnityEvent FinishRequestedUnity;
@@ -58,6 +59,7 @@ namespace _project.Scripts.UI
 
                 shopManager.RefreshShop();
             }
+            Refreshed?.Invoke();
         }
 
         private void OnDisable()
