@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65044c6c34334400b61d734a28d32a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.BouncyInvisiWalls
-  _bounceForce: 0.8
+  _bounceForce: 0.3
 --- !u!54 &52524817
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65044c6c34334400b61d734a28d32a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.BouncyInvisiWalls
-  _bounceForce: 0.8
+  _bounceForce: 0.3
 --- !u!54 &52524819
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65044c6c34334400b61d734a28d32a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.BouncyInvisiWalls
-  _bounceForce: 0.8
+  _bounceForce: 0.3
 --- !u!114 &121205499 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8785443882636715505, guid: 58e3635492258a14c8daa266b01df2c0, type: 3}
@@ -981,6 +981,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3518103881715996830, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
+      propertyPath: _randForce.x
+      value: 12.735294
+      objectReference: {fileID: 0}
+    - target: {fileID: 3518103881715996830, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
+      propertyPath: _randForce.y
+      value: 18.735294
+      objectReference: {fileID: 0}
     - target: {fileID: 4059356420765194803, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1020,6 +1028,46 @@ PrefabInstance:
     - target: {fileID: 4059356420765194803, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418015547920997539, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418015547920997539, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847450784806113964, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847450784806113964, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847450784806113964, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847450784806113964, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.082121216
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847450784806113964, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.80151
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847450784806113964, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.589231
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847450784806113964, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0603715
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847450784806113964, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 72.643
       objectReference: {fileID: 0}
     - target: {fileID: 6616681024255795825, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
       propertyPath: m_TagString
@@ -1084,7 +1132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65044c6c34334400b61d734a28d32a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.BouncyInvisiWalls
-  _bounceForce: 0.8
+  _bounceForce: 0.3
 --- !u!1 &1625370268
 GameObject:
   m_ObjectHideFlags: 0
