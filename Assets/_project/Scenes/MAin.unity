@@ -679,14 +679,14 @@ MonoBehaviour:
   _scoreData: {fileID: 11400000, guid: 127d8f30e24c24d4185fd76c8e9f4c2e, type: 2}
   _diceLauncher: {fileID: 980445019}
   _inventory:
-  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
-  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
-  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
-  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
-  - {fileID: 11400000, guid: a647005d8e6b96943b67409a75bc7f1b, type: 2}
+  - {fileID: 11400000, guid: edd35df10a3c11541b1344764e557c47, type: 2}
+  - {fileID: 11400000, guid: edd35df10a3c11541b1344764e557c47, type: 2}
+  - {fileID: 11400000, guid: edd35df10a3c11541b1344764e557c47, type: 2}
+  - {fileID: 11400000, guid: edd35df10a3c11541b1344764e557c47, type: 2}
+  - {fileID: 11400000, guid: edd35df10a3c11541b1344764e557c47, type: 2}
   _relics:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: a388ac1bec532024a9ee981be05d6db0, type: 2}
+  - {fileID: 11400000, guid: d7d30db6cdcc78f4aadd37a7345ef1b7, type: 2}
   - {fileID: 0}
   RoundWon:
     m_PersistentCalls:
@@ -1401,9 +1401,9 @@ MonoBehaviour:
   _itemPool:
     _serializedList:
     - Key: {fileID: 11400000, guid: d7d30db6cdcc78f4aadd37a7345ef1b7, type: 2}
-      Value: 1
+      Value: 5
     - Key: {fileID: 11400000, guid: a388ac1bec532024a9ee981be05d6db0, type: 2}
-      Value: 1
+      Value: 5
     - Key: {fileID: 11400000, guid: 799c10a85cb5ae943b3923eae4e4ddfa, type: 2}
       Value: 5
     - Key: {fileID: 11400000, guid: 3ccb05f703b959f428a7df291706f8ec, type: 2}
@@ -1419,7 +1419,7 @@ MonoBehaviour:
   dicePool:
     _serializedList:
     - Key: {fileID: 11400000, guid: 9e8cb7049f428a644ac04d32b95d2f88, type: 2}
-      Value: 1
+      Value: 5
     - Key: {fileID: 11400000, guid: 518c91ead4667a74d8634e9a7b8c323d, type: 2}
       Value: 5
     - Key: {fileID: 11400000, guid: 39ea4dc37ea2d2b4095d4f28c7f7c110, type: 2}
@@ -6399,6 +6399,18 @@ MonoBehaviour:
   FinishRequestedUnity:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 937055534}
+        m_TargetAssemblyTypeName: _project.Scripts.ShopManager, Assembly-CSharp
+        m_MethodName: ChooseShop
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6902060422091730362}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -6435,6 +6447,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _shopManager: {fileID: 0}
 --- !u!114 &3934059313922658420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6495,6 +6508,18 @@ MonoBehaviour:
   FinishRequestedUnity:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 937055534}
+        m_TargetAssemblyTypeName: _project.Scripts.ShopManager, Assembly-CSharp
+        m_MethodName: CloseShop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1190527199024634300}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -6531,6 +6556,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _shopManager: {fileID: 937055534}
 --- !u!114 &3998734401105132689
 MonoBehaviour:
   m_ObjectHideFlags: 0

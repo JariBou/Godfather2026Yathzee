@@ -30,6 +30,8 @@ namespace _project.Scripts.UI
         public event Action<int> InventorySlotClicked;
         public event Action FinishRequested;
         public UnityEvent FinishRequestedUnity;
+        
+        [SerializeField] private ShopManager _shopManager;
 
         private void OnEnable()
         {
@@ -48,7 +50,7 @@ namespace _project.Scripts.UI
             if (_finishButton != null)
                 _finishButton.onClick.AddListener(HandleFinishClicked);
             var gameManager = FindAnyObjectByType<GameManager>();
-            var shopManager = FindAnyObjectByType<ShopManager>();
+            var shopManager = _shopManager;
 
             if (gameManager != null && shopManager != null)
             {
