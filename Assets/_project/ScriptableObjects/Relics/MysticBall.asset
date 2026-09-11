@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d897e879ab9641a3a5ad512f239efdd1, type: 3}
   m_Name: MysticBall
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Relics.RandomOutcomeRelic
-  _name: 
+  _name: Boule Mystique
   _icon: {fileID: 21300000, guid: c6bac08df78e31846b3a926ad4824d9d, type: 3}
-  _description: 
+  _description: "Chaque tour, donne une r\xE9ponse al\xE9atoire entre :\nOui \u2192
+    Multiplie le score par 4\nProbablement \u2192 Multiplie le score par 2\nProbablement
+    pas \u2192 Divise le score par 2\nNon \u2192 Divise le score par 4"
   _effect: {fileID: 11400000, guid: 64dc524c19b818f48a18756349e0b9c3, type: 2}

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01a0b7929134bb6a110ab6653375c5a, type: 3}
   m_Name: Bronze Die
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.DiceDataScriptableObject
-  _name: 
-  _description: 
+  _name: "D\xE9 en Bronze"
+  _description: "Un d\xE9 en bronze, sans effet particulier.\n\n2 / 4 / 6 / 8 / 10
+    / 12"
   _icon: {fileID: 21300000, guid: 522eb7ccb20dbe942ac827a3a2502de8, type: 3}
   _prefab: {fileID: -2818284881230932013, guid: 4fcee151deef3594cb2ffe8d2509cda4, type: 3}

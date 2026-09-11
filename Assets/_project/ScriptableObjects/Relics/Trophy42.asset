@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5339f3e5eb34dc09b28b22b5c32dad9, type: 3}
   m_Name: Trophy42
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Relics.Trophy42
-  _name: 
+  _name: "Troph\xE9 42"
   _icon: {fileID: 21300000, guid: 584efc840c61cd34980fb0a76b3bd9f5, type: 3}
-  _description: 
+  _description: "Chaque tour, donne un pr\xE9sage al\xE9atoire entre :\nGrande richesse
+    \u2192 Multiplie le score par 8\nBonne augure \u2192 Multiplie le score par 2\nLe
+    calme avant la temp\xEAte \u2192 Ne fait rien\nMort imminente \u2192 Divise le
+    score par 8"
   _effect: {fileID: 11400000, guid: 4c69e92631b9489459ea3ee6b13f830d, type: 2}
