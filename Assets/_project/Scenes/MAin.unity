@@ -191,10 +191,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WAlls
       objectReference: {fileID: 0}
-    - target: {fileID: 6091639967432993047, guid: 1078a2a8395338543857b159e9dd349c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.95
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -843,6 +839,8 @@ MonoBehaviour:
     _serializedList:
     - Key: {fileID: 11400000, guid: d7d30db6cdcc78f4aadd37a7345ef1b7, type: 2}
       Value: 1
+    - Key: {fileID: 11400000, guid: a388ac1bec532024a9ee981be05d6db0, type: 2}
+      Value: 1
     - Key: {fileID: 11400000, guid: 799c10a85cb5ae943b3923eae4e4ddfa, type: 2}
       Value: 5
     - Key: {fileID: 11400000, guid: 3ccb05f703b959f428a7df291706f8ec, type: 2}
@@ -857,6 +855,8 @@ MonoBehaviour:
       Value: 5
   dicePool:
     _serializedList:
+    - Key: {fileID: 11400000, guid: 9e8cb7049f428a644ac04d32b95d2f88, type: 2}
+      Value: 1
     - Key: {fileID: 11400000, guid: 518c91ead4667a74d8634e9a7b8c323d, type: 2}
       Value: 5
     - Key: {fileID: 11400000, guid: 39ea4dc37ea2d2b4095d4f28c7f7c110, type: 2}
@@ -987,7 +987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3518103881715996830, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
       propertyPath: _randForce.x
-      value: 13.4
+      value: 12.735294
       objectReference: {fileID: 0}
     - target: {fileID: 3518103881715996830, guid: d4bb7426059f6bd43a4aab9857f48d36, type: 3}
       propertyPath: _randForce.y
@@ -2211,6 +2211,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1753276498}
     m_Modifications:
     - target: {fileID: 1070111138005393183, guid: 36e2790f51512954b980e4d52714f097, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070111138005393183, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
@@ -2244,7 +2248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3827705350026562025, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3868838963018742507, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: m_Pivot.x
@@ -2445,6 +2449,10 @@ PrefabInstance:
     - target: {fileID: 8157537290292557547, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.AudioClip, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302610584590380482, guid: 36e2790f51512954b980e4d52714f097, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3889,7 +3897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7969235115383155906, guid: e00dad676ce7f6d4b8aac25029ff8f5c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8252561725405512717, guid: e00dad676ce7f6d4b8aac25029ff8f5c, type: 3}
       propertyPath: m_Color.b
