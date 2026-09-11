@@ -280,8 +280,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Inventaire des passifs
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
-  m_sharedMaterial: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b4c90b20d634637479e89e8e69fbbca6, type: 2}
+  m_sharedMaterial: {fileID: 6527904843007448590, guid: b4c90b20d634637479e89e8e69fbbca6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2568,8 +2568,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Inventaire des d\xE9s"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
-  m_sharedMaterial: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b4c90b20d634637479e89e8e69fbbca6, type: 2}
+  m_sharedMaterial: {fileID: 6527904843007448590, guid: b4c90b20d634637479e89e8e69fbbca6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
