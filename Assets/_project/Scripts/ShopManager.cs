@@ -159,12 +159,28 @@ namespace _project.Scripts
 
             if (!(shopIndex >= 0 && shopIndex < _shopDicePool.Count))
             {
-                Debug.LogError($"Shop Index was out of bounds: Expected [0, {_shopDicePool.Count - 1}] was '{shopIndex}'");
+                Debug.LogError($"Shop Index was out of bounds: Expected [0, {_shopDicePool.Count}[ was '{shopIndex}'");
+                Debug.LogError($"Pool contains:");
+                if (_shopDicePool.Count > 0)
+                {
+                    foreach (var el in _gameManager.Relics)
+                    {
+                        Debug.LogError($"   -> {el.Name}");
+                    }
+                }
                 return;
             }
             if (!(invIndex >= 0 && invIndex < _gameManager.Inventory.Count))
             {
-                Debug.LogError($"Inventory Index was out of bounds: Expected [0, {_gameManager.Inventory.Count - 1}] was '{invIndex}'");
+                Debug.LogError($"Inventory Index was out of bounds: Expected [0, {_gameManager.Inventory.Count}[ was '{invIndex}'");
+                Debug.LogError($"Inventory contains:");
+                if (_gameManager.Inventory.Count > 0)
+                {
+                    foreach (var el in _gameManager.Relics)
+                    {
+                        Debug.LogError($"   -> {el.Name}");
+                    }
+                }
                 return;
             }
             
@@ -180,12 +196,28 @@ namespace _project.Scripts
             
             if (!(shopIndex >= 0 && shopIndex < _shopDicePool.Count))
             {
-                Debug.LogError($"Shop Index was out of bounds: Expected [0, {_shopDicePool.Count - 1}] was '{shopIndex}'");
+                Debug.LogError($"Shop Index was out of bounds: Expected [0, {_shopDicePool.Count}[ was '{shopIndex}'");
+                Debug.LogError($"Pool contains:");
+                if (_shopDicePool.Count > 0)
+                {
+                    foreach (var el in _shopDicePool)
+                    {
+                        Debug.LogError($"   -> {el.Name}");
+                    }
+                }
                 return;
             }
-            if (!(invIndex >= 0 && invIndex < _gameManager.Inventory.Count))
+            if (!(invIndex >= 0 && invIndex < _gameManager.Relics.Count))
             {
-                Debug.LogError($"Inventory Index was out of bounds: Expected [0, {_gameManager.Inventory.Count - 1}] was '{invIndex}'");
+                Debug.LogError($"Relics Inventory Index was out of bounds: Expected [0, {_gameManager.Relics.Count}[ was '{invIndex}'");
+                Debug.LogError($"Relics Inventory contains:");
+                if (_gameManager.Relics.Count > 0)
+                {
+                    foreach (var el in _gameManager.Relics)
+                    {
+                        Debug.LogError($"   -> {el.Name}");
+                    }
+                }
                 return;
             }
             
