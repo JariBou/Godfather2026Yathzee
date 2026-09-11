@@ -2,6 +2,8 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using _project.Scripts.ScriptableObjects.Dice;
+using _project.Scripts.ScriptableObjects.Relics;
 
 namespace _project.Scripts.UI
 {
@@ -19,6 +21,9 @@ namespace _project.Scripts.UI
         [SerializeField] private ItemVisualView[] _offerVisuals = Array.Empty<ItemVisualView>();
 
         [SerializeField] private ItemVisualView[] _inventoryVisuals = Array.Empty<ItemVisualView>();
+        [Header("Infobulles")] [SerializeField] private ItemTooltipTrigger[] _offerTooltips = Array.Empty<ItemTooltipTrigger>();
+
+        [SerializeField] private ItemTooltipTrigger[] _inventoryTooltips = Array.Empty<ItemTooltipTrigger>();
 
         public event Action<int> OfferClicked;
         public event Action<int> InventorySlotClicked;
@@ -120,8 +125,41 @@ namespace _project.Scripts.UI
         {
             _finishButton.interactable = interactable;
         }
+
+        public void SetOfferTooltip(int index, DiceDataScriptableObject dice)
+        {
+            if (index >= 0 && index < _offerTooltips.Length &&
+                _offerTooltips[index] != null)
+            {
+                _offerTooltips[index].SetData(dice);
+            }
+        }
+
+        public void SetOfferTooltip(int index, RelicScriptableObjectBase relic)
+        {
+            if (index >= 0 && index < _offerTooltips.Length &&
+                _offerTooltips[index] != null)
+            {
+                _offerTooltips[index].SetData(relic);
+            }
+        }
+
+        public void SetInventoryTooltip(int index, DiceDataScriptableObject dice)
+        {
+            if (index >= 0 && index < _inventoryTooltips.Length &&
+                _inventoryTooltips[index] != null)
+            {
+                _inventoryTooltips[index].SetData(dice);
+            }
+        }
+
+        public void SetInventoryTooltip(int index, RelicScriptableObjectBase relic)
+        {
+            if (index >= 0 && index < _inventoryTooltips.Length &&
+                _inventoryTooltips[index] != null)
+            {
+                _inventoryTooltips[index].SetData(relic);
+            }
+        }
     }
-
-
-
 }
