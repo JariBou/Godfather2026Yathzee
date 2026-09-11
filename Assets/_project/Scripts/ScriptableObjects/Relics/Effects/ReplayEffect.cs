@@ -14,7 +14,13 @@ namespace _project.Scripts.ScriptableObjects.Relics.Effects
         {
             List<DiceBase> prefabs = gameState.Inventory.Select(data => data.Prefab).ToList();
 
-            await gameState.Launcher.LaunchDiceAndWaitForStop(prefabs);
+            List<DiceBase> dice = await gameState.Launcher.LaunchDiceAndWaitForStop(prefabs);
+            foreach (DiceBase d in dice)
+            {
+                gameState.ActiveDice.Push(d);
+            }
+
+            await gameState.ResolveDice();
         }
     }
 }

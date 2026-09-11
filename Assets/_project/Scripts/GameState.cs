@@ -86,13 +86,7 @@ namespace _project.Scripts
                 relic.ApplyEffect(this);
             }
 
-            while (ActiveDice.Count > 0)
-            {
-                DiceBase dice = ActiveDice.Pop();
-                InGameDice.Add(dice);
-                await dice.ApplyEffect(this);
-                await Awaitable.WaitForSecondsAsync(EffectApplicationDelay);
-            }
+            await ResolveDice();
 
         #pragma warning disable CS0612 // Type or member is obsolete
             for (int i = 0; i < (int)EffectPriority.COUNT; i++)
@@ -113,6 +107,17 @@ namespace _project.Scripts
 
             await Awaitable.MainThreadAsync();
             GameStateResolved?.Invoke(this);
+        }
+
+        public async Awaitable ResolveDice()
+        {
+            while (ActiveDice.Count > 0)
+            {
+                DiceBase dice = ActiveDice.Pop();
+                InGameDice.Add(dice);
+                await dice.ApplyEffect(this);
+                await Awaitable.WaitForSecondsAsync(EffectApplicationDelay);
+            }
         }
     }
 }
