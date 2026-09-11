@@ -853,7 +853,7 @@ MonoBehaviour:
   faceIdMap:
     _serializedList:
     - Key: {fileID: 1289056679750862235}
-      Value: 4
+      Value: 5
     - Key: {fileID: 4620090296153790328}
       Value: 1
     - Key: {fileID: 9034802815489823948}
@@ -861,9 +861,9 @@ MonoBehaviour:
     - Key: {fileID: 9090875489749151469}
       Value: 3
     - Key: {fileID: 6567568357036644426}
-      Value: 5
-    - Key: {fileID: 159346355484797554}
       Value: 2
+    - Key: {fileID: 159346355484797554}
+      Value: 4
   scoreEffectScript: {fileID: -8313792042258631889, guid: d70d00766ffc7634cb82496ea292c377, type: 3}
   _soundCooldown: 0.2
 --- !u!4 &7538356448069179604 stripped
