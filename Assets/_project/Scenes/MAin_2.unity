@@ -2192,6 +2192,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1753276498}
     m_Modifications:
     - target: {fileID: 1070111138005393183, guid: 36e2790f51512954b980e4d52714f097, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 28757b246e843fd41940d921f8935ab6, type: 2}
+    - target: {fileID: 1070111138005393183, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
@@ -2367,6 +2371,10 @@ PrefabInstance:
       propertyPath: PlayRequestedUnity.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8302610584590380482, guid: 36e2790f51512954b980e4d52714f097, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 28757b246e843fd41940d921f8935ab6, type: 2}
     - target: {fileID: 8302610584590380482, guid: 36e2790f51512954b980e4d52714f097, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
