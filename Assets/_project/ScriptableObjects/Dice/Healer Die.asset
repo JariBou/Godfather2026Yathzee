@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01a0b7929134bb6a110ab6653375c5a, type: 3}
   m_Name: Healer Die
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.DiceDataScriptableObject
-  _name: 
-  _description: 
+  _name: "D\xE9 Gu\xE9risseur"
+  _description: "Si ce d\xE9 tombe sur une face 1, transforme un de vos D\xE9 Corrompu
+    en D\xE9 Bronze.\n\nCet effet s'active avant vos reliques.\n\n1 / 10 / 30 / 60
+    / 90 / 120"
   _icon: {fileID: 21300000, guid: 2b8c68ea7bf364743938bd09fc9a20d0, type: 3}
   _prefab: {fileID: -5794385862819123820, guid: f9a8bbfbe4c3b4143b1cd9127cb3c378, type: 3}

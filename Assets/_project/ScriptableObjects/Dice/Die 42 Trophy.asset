@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01a0b7929134bb6a110ab6653375c5a, type: 3}
   m_Name: Die 42 Trophy
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.DiceDataScriptableObject
-  _name: 
-  _description: 
+  _name: "D\xE9 Troph\xE9e 42"
+  _description: "Si ce d\xE9 tombe sur une face 42, ce d\xE9 se lance 1 fois suppl\xE9mentaire.\n\nCet
+    effet s'active avant vos reliques.\n\n1 / 2 / 42 / 42 / 42 / 42"
   _icon: {fileID: 21300000, guid: 09e229116c263694b963818ab8c6ade6, type: 3}
   _prefab: {fileID: 3111463185057125695, guid: 399961cf75446a5428dcc095d13d1d49, type: 3}

@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 8472715385711452145}
   - component: {fileID: 5188367783134354164}
   - component: {fileID: 3842111050018330855}
+  - component: {fileID: 3169819389770615835}
   m_Layer: 5
   m_Name: DiceSlot_05
   m_TagString: Untagged
@@ -273,6 +274,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.IndexedButtonView
   _index: 4
   _button: {fileID: 5188367783134354164}
+--- !u!114 &3169819389770615835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770054251561080934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccc45f438dc28b4da615fca82f0d17b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemTooltipTrigger
+  _tooltip: {fileID: 0}
+  _dice: {fileID: 0}
+  _relic: {fileID: 0}
 --- !u!1 &1115688015888925176
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +303,7 @@ GameObject:
   - component: {fileID: 7965643465591485980}
   - component: {fileID: 8785698277826324393}
   - component: {fileID: 6789987814728637866}
+  - component: {fileID: 6724288338873993556}
   m_Layer: 5
   m_Name: DiceOffer_03
   m_TagString: Untagged
@@ -423,6 +440,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemVisualView
   _icon: {fileID: 7030139721563713547}
   _valueText: {fileID: 0}
+--- !u!114 &6724288338873993556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115688015888925176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccc45f438dc28b4da615fca82f0d17b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemTooltipTrigger
+  _tooltip: {fileID: 0}
+  _dice: {fileID: 0}
+  _relic: {fileID: 0}
 --- !u!1 &1445327812401946782
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +544,7 @@ GameObject:
   - component: {fileID: 324458389153732129}
   - component: {fileID: 832128917405670487}
   - component: {fileID: 6630699285707818385}
+  - component: {fileID: 8428643979029713387}
   m_Layer: 5
   m_Name: DiceOffer_02
   m_TagString: Untagged
@@ -648,6 +681,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemVisualView
   _icon: {fileID: 365902836844335038}
   _valueText: {fileID: 0}
+--- !u!114 &8428643979029713387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769593243388607855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccc45f438dc28b4da615fca82f0d17b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemTooltipTrigger
+  _tooltip: {fileID: 0}
+  _dice: {fileID: 0}
+  _relic: {fileID: 0}
 --- !u!1 &1918218445115354116
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,6 +710,7 @@ GameObject:
   - component: {fileID: 6657058511688860194}
   - component: {fileID: 786816914457559814}
   - component: {fileID: 2038571864957943008}
+  - component: {fileID: 2266253975413654276}
   m_Layer: 5
   m_Name: DiceOffer_01
   m_TagString: Untagged
@@ -798,6 +847,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemVisualView
   _icon: {fileID: 5352984107359749542}
   _valueText: {fileID: 0}
+--- !u!114 &2266253975413654276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918218445115354116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccc45f438dc28b4da615fca82f0d17b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemTooltipTrigger
+  _tooltip: {fileID: 0}
+  _dice: {fileID: 0}
+  _relic: {fileID: 0}
 --- !u!1 &2052467286062428996
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,8 +1206,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Inventaire des d\xE9s"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
+  m_sharedMaterial: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1225,6 +1289,7 @@ GameObject:
   - component: {fileID: 1391445597278791719}
   - component: {fileID: 3105022682140621453}
   - component: {fileID: 4408689121251339687}
+  - component: {fileID: 6583735441847949823}
   m_Layer: 5
   m_Name: DiceSlot_02
   m_TagString: Untagged
@@ -1348,6 +1413,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.IndexedButtonView
   _index: 1
   _button: {fileID: 3105022682140621453}
+--- !u!114 &6583735441847949823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786115097068717738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccc45f438dc28b4da615fca82f0d17b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemTooltipTrigger
+  _tooltip: {fileID: 0}
+  _dice: {fileID: 0}
+  _relic: {fileID: 0}
 --- !u!1 &2993326591170183867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,8 +1586,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Terminer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
+  m_sharedMaterial: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1780,8 +1860,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xC9changez vos d\xE9s contre ceux propos\xE9s au march\xE9."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
+  m_sharedMaterial: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2000,6 +2080,7 @@ GameObject:
   - component: {fileID: 9085152298234118815}
   - component: {fileID: 1549956688919328824}
   - component: {fileID: 8597989634220593527}
+  - component: {fileID: 8933973381262405078}
   m_Layer: 5
   m_Name: DiceSlot_01
   m_TagString: Untagged
@@ -2123,6 +2204,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.IndexedButtonView
   _index: 0
   _button: {fileID: 1549956688919328824}
+--- !u!114 &8933973381262405078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4047444280982292120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccc45f438dc28b4da615fca82f0d17b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemTooltipTrigger
+  _tooltip: {fileID: 0}
+  _dice: {fileID: 0}
+  _relic: {fileID: 0}
 --- !u!1 &4450847693833527536
 GameObject:
   m_ObjectHideFlags: 0
@@ -2468,6 +2564,7 @@ GameObject:
   - component: {fileID: 8161942933511126233}
   - component: {fileID: 4628296152323861895}
   - component: {fileID: 182769523348532106}
+  - component: {fileID: 2647549932141525291}
   m_Layer: 5
   m_Name: DiceSlot_04
   m_TagString: Untagged
@@ -2591,6 +2688,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.IndexedButtonView
   _index: 3
   _button: {fileID: 4628296152323861895}
+--- !u!114 &2647549932141525291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5919994640701994426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccc45f438dc28b4da615fca82f0d17b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemTooltipTrigger
+  _tooltip: {fileID: 0}
+  _dice: {fileID: 0}
+  _relic: {fileID: 0}
 --- !u!1 &6060231865048079653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2686,6 +2798,7 @@ GameObject:
   - component: {fileID: 2881501371011611903}
   - component: {fileID: 4884043589267812239}
   - component: {fileID: 7747205359132469321}
+  - component: {fileID: 3993077401529456603}
   m_Layer: 5
   m_Name: DiceSlot_03
   m_TagString: Untagged
@@ -2809,6 +2922,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.IndexedButtonView
   _index: 2
   _button: {fileID: 4884043589267812239}
+--- !u!114 &3993077401529456603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6405459176551641388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccc45f438dc28b4da615fca82f0d17b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.UI.ItemTooltipTrigger
+  _tooltip: {fileID: 0}
+  _dice: {fileID: 0}
+  _relic: {fileID: 0}
 --- !u!1 &6702634602198433517
 GameObject:
   m_ObjectHideFlags: 0
@@ -3316,8 +3444,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Shop Time !
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
+  m_sharedMaterial: {fileID: 9066550219454895470, guid: 74e6ccf5bc923034ab1d1f492f571730, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3461,6 +3589,8 @@ MonoBehaviour:
   - {fileID: 8996157797430936993}
   - {fileID: 2031856312657482105}
   - {fileID: 3195708987911056899}
+  _offerTooltips: []
+  _inventoryTooltips: []
   FinishRequestedUnity:
     m_PersistentCalls:
       m_Calls: []

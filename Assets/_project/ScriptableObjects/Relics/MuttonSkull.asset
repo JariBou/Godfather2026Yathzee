@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5339f3e5eb34dc09b28b22b5c32dad9, type: 3}
   m_Name: MuttonSkull
   m_EditorClassIdentifier: Assembly-CSharp::_project.Scripts.ScriptableObjects.Relics.Trophy42
-  _name: 
+  _name: "Cr\xE2ne de Mouton"
   _icon: {fileID: 21300000, guid: 5f62c9a18013dfc4fbc37994e14d9c8a, type: 3}
-  _description: 
+  _description: "Chaque tour, transforme tous les 6 pr\xE9sents dans le score en
+    9."
   _effect: {fileID: 11400000, guid: 8f10de8086b028044a03e959fa5812ff, type: 2}
